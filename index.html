@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听力填词练习</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        audio {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            white-space: pre-wrap;
+        }
+        .correct-answer {
+            color: green;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        .incorrect-answer {
+            color: red;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        input.correct {
+            border-color: green;
+            border-style: solid;
+            border-width: 2px;
+        }
+        input.incorrect {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>听力填词练习</h1>
+    <audio controls>
+        <source src="http://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-rss-low/proto/http/vpid/p0kg6v8m.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div class="text-container" id="text-container">
+        I'm Phil.
+
+        And I'm Beck.
+
+        Nowadays, I often see people carrying water (bottles) with them, to make sure they (drink) (enough). How much water do you drink (a) (day), Phil?
+
+        Hoo, don't know. Er, maybe about (a) (litre)?
+
+        OK, and do you know how much water you should drink a day?
+
+        I (think) (it's) probably about 2 litres?
+    </div>
+
+    <button onclick="checkAnswers()">提交</button>
+
+    <script>
+        const correctAnswers = ["bottles", "drink", "enough", "a", "day", "a", "litre", "think", "it's"];
+        const answerElements = [];
+        const answerSpans = [];
+
+        // Insert input fields into the text container
+        let textContainer = document.getElementById('text-container');
+        let newTextContent = textContainer.innerHTML.replace(/\(([^)]+)\)/g, (match, p1, offset, string) => {
+            let input = document.createElement("input");
+            input.size = 15;
+            answerElements.push(input);
+
+            let span = document.createElement("span");
+            span.className = "correct-answer";
+            span.style.display = "none"; // Initially hide the correct answer
+            answerSpans.push(span);
+
+            return `${input.outerHTML} ${span.outerHTML}`;
+        });
+        textContainer.innerHTML = newTextContent;
+
+        // Re-query the input elements after setting innerHTML
+        answerElements.length = 0; // Clear the array
+        answerSpans.length = 0; // Clear the array
+        textContainer.querySelectorAll('input').forEach(input => {
+            answerElements.push(input);
+        });
+        textContainer.querySelectorAll('.correct-answer').forEach(span => {
+            answerSpans.push(span);
+        });
+
+        function checkAnswers() {
+            let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
+
+            console.log("User Answers:", userAnswers); // Debug log
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    answerElements[i].classList.add("correct");
+                    answerElements[i].classList.remove("incorrect");
+                } else {
+                    answerElements[i].classList.add("incorrect");
+                    answerElements[i].classList.remove("correct");
+                }
+
+                // Display the correct answer
+                answerSpans[i].textContent = `(${correctAnswers[i]})`;
+                answerSpans[i].style.display = "inline"; // Show the correct answer
+            }
+        }
+
+        // Log the elements to ensure they are correctly captured
+        console.log("Initial Answer Elements:", answerElements);
+        console.log("Initial Answer Spans:", answerSpans);
+    </script>
+</body>
+</html>
+
+
+
