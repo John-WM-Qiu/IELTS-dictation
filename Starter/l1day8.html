@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1场景词汇听写-Day8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        audio {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            white-space: pre-wrap;
+        }
+        .correct-answer {
+            color: green;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        .incorrect-answer {
+            color: red;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        input.correct {
+            border-color: green;
+            border-style: solid;
+            border-width: 2px;
+        }
+        input.incorrect {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L1场景词汇-Day8听写练习</h1>
+    <audio controls>
+        <source src="l1day8.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div class="text-container" id="text-container">
+        1. (reference stacks)
+        
+        2. (visual)
+        
+        3. (in circulation)
+        
+        4. (library card)
+        
+        5. (date slip)
+        
+        6. (overdue and pay a fine)
+        
+        7. (reference)
+        
+        8. (resource center)
+        
+        9. (screen)
+        
+        10. (date of expiry)
+        
+        11. (slip)
+        
+        12. (back issues)
+        
+        13. (not for circulation)
+        
+        14. (information desk)
+        
+        15. (returns and loans)
+        
+        16. (delivery desk)
+        
+        17. (subject)
+        
+        18. (resource)
+        
+        19. (current issues)
+        
+        20. (touch-screen service)
+        
+        21. (room)
+        
+        22. (return)
+        
+        23. (periodical)
+        
+        24. (shelf)
+        
+        25. (closed reserve)
+        
+        26. (closed shelves)
+        
+        27. (circulation desk)
+        
+        28. (out on loan)
+        
+        29. (reserve)
+        
+        30. (title)
+        
+        31. (overdue)
+        
+        32. (interlibrary service)
+        
+        33. (pay)
+        
+        34. (on the shelf)
+        
+        35. (deadline)
+        
+        36. (touch)
+        
+        37. (photocopying room)
+        
+        38. (return in time)
+        
+        39. (out of circulation)
+        
+        40. (admission card)
+ 
+    </div>
+
+    <button onclick="checkAnswers()">提交</button>
+
+    <script>
+        const correctAnswers = ["reference stacks", "visual", "in circulation", "library card", "date slip", "overdue and pay a fine", "reference", "resource center", "screen", "date of expiry", "slip", "back issues", "not for circulation", "information desk", "returns and loans", "delivery desk", "subject", "resource", "current issues", "touch-screen service", "room", "return", "periodical", "shelf", "closed reserve", "closed shelves", "circulation desk", "out on loan", "reserve", "title", "overdue", "interlibrary service", "pay", "on the shelf", "deadline", "touch", "photocopying room", "return in time", "out of circulation", "admission card"];
+        const answerElements = [];
+        const answerSpans = [];
+
+        // Insert input fields into the text container
+        let textContainer = document.getElementById('text-container');
+        let newTextContent = textContainer.innerHTML.replace(/\(([^)]+)\)/g, (match, p1, offset, string) => {
+            let input = document.createElement("input");
+            input.size = 15;
+            answerElements.push(input);
+
+            let span = document.createElement("span");
+            span.className = "correct-answer";
+            span.style.display = "none"; // Initially hide the correct answer
+            answerSpans.push(span);
+
+            return `${input.outerHTML} ${span.outerHTML}`;
+        });
+        textContainer.innerHTML = newTextContent;
+
+        // Re-query the input elements after setting innerHTML
+        answerElements.length = 0; // Clear the array
+        answerSpans.length = 0; // Clear the array
+        textContainer.querySelectorAll('input').forEach(input => {
+            answerElements.push(input);
+        });
+        textContainer.querySelectorAll('.correct-answer').forEach(span => {
+            answerSpans.push(span);
+        });
+
+        function checkAnswers() {
+            let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
+
+            console.log("User Answers:", userAnswers); // Debug log
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    answerElements[i].classList.add("correct");
+                    answerElements[i].classList.remove("incorrect");
+                } else {
+                    answerElements[i].classList.add("incorrect");
+                    answerElements[i].classList.remove("correct");
+                }
+
+                // Display the correct answer
+                answerSpans[i].textContent = `(${correctAnswers[i]})`;
+                answerSpans[i].style.display = "inline"; // Show the correct answer
+            }
+        }
+
+        // Log the elements to ensure they are correctly captured
+        console.log("Initial Answer Elements:", answerElements);
+        console.log("Initial Answer Spans:", answerSpans);
+    </script>
+    <footer>
+        <p>All Rights Reserved by John WM Qiu © 2025</p>
+    </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1场景词汇听写-Day2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        audio {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            white-space: pre-wrap;
+        }
+        .correct-answer {
+            color: green;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        .incorrect-answer {
+            color: red;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        input.correct {
+            border-color: green;
+            border-style: solid;
+            border-width: 2px;
+        }
+        input.incorrect {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L1场景词汇-Day2听写练习</h1>
+    <audio controls>
+        <source src="l1day2.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div class="text-container" id="text-container">
+        1. (passageway)
+        
+        2. (bloc)
+        
+        3. (toaster)
+        
+        4. (move-in date)
+        
+        5. (leak)
+        
+        6. (game room)
+        
+        7. (sitting room)
+        
+        8. (pillow)
+        
+        9. (mat)
+        
+        10. (storehouse)
+        
+        11. (living room)
+        
+        12. (deposit)
+        
+        13. (rule)
+        
+        14. (move-in notice)
+        
+        15. (utensil)
+        
+        16. (tenant)
+        
+        17. (landlord)
+        
+        18. (refund)
+        
+        19. (stereo system)
+        
+        20. (receipt)
+        
+        21. (roof)
+        
+        22. (contract)
+        
+        23. (senior)
+        
+        24. (laundry room)
+        
+        25. (application)
+        
+        26. (lounge)
+        
+        27. (lease)
+        
+        28. (emergency)
+        
+        29. (house owner)
+        
+        30. (porch)
+        
+        31. (shared kitchen)
+        
+        32. (mattress)
+        
+        33. (vegetarian)
+        
+        34. (bill)
+        
+        35. (insurance)
+        
+        36. (terrace)
+        
+        37. (agency)
+        
+        38. (vacuum cleaner)
+        
+        39. (landlady)
+        
+        40. (settle down) 
+ 
+    </div>
+
+    <button onclick="checkAnswers()">提交</button>
+
+    <script>
+        const correctAnswers = ["passageway", "bloc", "toaster", "move-in date", "leak", "game room", "sitting room", "pillow", "mat", "storehouse", "living room", "deposit", "rule", "move-in notice", "utensil", "tenant", "landlord", "refund", "stereo system", "receipt", "roof", "contract", "senior", "laundry room", "application", "lounge", "lease", "emergency", "house owner", "porch", "shared kitchen", "mattress", "vegetarian", "bill", "insurance", "terrace", "agency", "vacuum cleaner", "landlady", "settle down"];
+        const answerElements = [];
+        const answerSpans = [];
+
+        // Insert input fields into the text container
+        let textContainer = document.getElementById('text-container');
+        let newTextContent = textContainer.innerHTML.replace(/\(([^)]+)\)/g, (match, p1, offset, string) => {
+            let input = document.createElement("input");
+            input.size = 15;
+            answerElements.push(input);
+
+            let span = document.createElement("span");
+            span.className = "correct-answer";
+            span.style.display = "none"; // Initially hide the correct answer
+            answerSpans.push(span);
+
+            return `${input.outerHTML} ${span.outerHTML}`;
+        });
+        textContainer.innerHTML = newTextContent;
+
+        // Re-query the input elements after setting innerHTML
+        answerElements.length = 0; // Clear the array
+        answerSpans.length = 0; // Clear the array
+        textContainer.querySelectorAll('input').forEach(input => {
+            answerElements.push(input);
+        });
+        textContainer.querySelectorAll('.correct-answer').forEach(span => {
+            answerSpans.push(span);
+        });
+
+        function checkAnswers() {
+            let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
+
+            console.log("User Answers:", userAnswers); // Debug log
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    answerElements[i].classList.add("correct");
+                    answerElements[i].classList.remove("incorrect");
+                } else {
+                    answerElements[i].classList.add("incorrect");
+                    answerElements[i].classList.remove("correct");
+                }
+
+                // Display the correct answer
+                answerSpans[i].textContent = `(${correctAnswers[i]})`;
+                answerSpans[i].style.display = "inline"; // Show the correct answer
+            }
+        }
+
+        // Log the elements to ensure they are correctly captured
+        console.log("Initial Answer Elements:", answerElements);
+        console.log("Initial Answer Spans:", answerSpans);
+    </script>
+    <footer>
+        <p>All Rights Reserved by John WM Qiu © 2025</p>
+    </footer>
+</body>
+</html>
+
+
+

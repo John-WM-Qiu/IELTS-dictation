@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1场景词汇听写-Day5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        audio {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            white-space: pre-wrap;
+        }
+        .correct-answer {
+            color: green;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        .incorrect-answer {
+            color: red;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        input.correct {
+            border-color: green;
+            border-style: solid;
+            border-width: 2px;
+        }
+        input.incorrect {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L1场景词汇-Day5听写练习</h1>
+    <audio controls>
+        <source src="l1day5.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div class="text-container" id="text-container">
+        1. (accountant)
+        
+        2. (cleaner)
+        
+        3. (expert)
+        
+        4. (well-paid)
+        
+        5. (team spirit)
+        
+        6. (attendant)
+        
+        7. (pilot)
+        
+        8. (career)
+        
+        9. (appeal)
+        
+        10. (organization)
+        
+        11. (clerk)
+        
+        12. (teamwork)
+        
+        13. (requirement)
+        
+        14. (commission)
+        
+        15. (actress)
+        
+        16. (blue-collar)
+        
+        17. (regulation)
+        
+        18. (programmer)
+        
+        19. (profession)
+        
+        20. (cooperative)
+        
+        21. (wage)
+        
+        22. (reporter)
+        
+        23. (assistant)
+        
+        24. (apply)
+        
+        25. (white-collar)
+        
+        26. (businessman)
+        
+        27. (employ)
+        
+        28. (candidate)
+        
+        29. (reference)
+        
+        30. (engineer)
+        
+        31. (assignment)
+        
+        32. (tour guide)
+        
+        33. (training opportunity)
+        
+        34. (office)
+        
+        35. (manage)
+        
+        36. (recruit)
+        
+        37. (receptionist)
+        
+        38. (stockbroker)
+        
+        39. (waiter)
+        
+        40. (retraining)
+ 
+    </div>
+
+    <button onclick="checkAnswers()">提交</button>
+
+    <script>
+        const correctAnswers = ["accountant", "cleaner", "expert", "well-paid", "team spirit", "attendant", "pilot", "career", "appeal", "organization", "clerk", "teamwork", "requirement", "commission", "actress", "blue-collar", "regulation", "programmer", "profession", "cooperative", "wage", "reporter", "assistant", "apply", "white-collar", "businessman", "employ", "candidate", "reference", "engineer", "assignment", "tour guide", "training opportunity", "office", "manage", "recruit", "receptionist", "stockbroker", "waiter", "retraining"];
+        const answerElements = [];
+        const answerSpans = [];
+
+        // Insert input fields into the text container
+        let textContainer = document.getElementById('text-container');
+        let newTextContent = textContainer.innerHTML.replace(/\(([^)]+)\)/g, (match, p1, offset, string) => {
+            let input = document.createElement("input");
+            input.size = 15;
+            answerElements.push(input);
+
+            let span = document.createElement("span");
+            span.className = "correct-answer";
+            span.style.display = "none"; // Initially hide the correct answer
+            answerSpans.push(span);
+
+            return `${input.outerHTML} ${span.outerHTML}`;
+        });
+        textContainer.innerHTML = newTextContent;
+
+        // Re-query the input elements after setting innerHTML
+        answerElements.length = 0; // Clear the array
+        answerSpans.length = 0; // Clear the array
+        textContainer.querySelectorAll('input').forEach(input => {
+            answerElements.push(input);
+        });
+        textContainer.querySelectorAll('.correct-answer').forEach(span => {
+            answerSpans.push(span);
+        });
+
+        function checkAnswers() {
+            let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
+
+            console.log("User Answers:", userAnswers); // Debug log
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    answerElements[i].classList.add("correct");
+                    answerElements[i].classList.remove("incorrect");
+                } else {
+                    answerElements[i].classList.add("incorrect");
+                    answerElements[i].classList.remove("correct");
+                }
+
+                // Display the correct answer
+                answerSpans[i].textContent = `(${correctAnswers[i]})`;
+                answerSpans[i].style.display = "inline"; // Show the correct answer
+            }
+        }
+
+        // Log the elements to ensure they are correctly captured
+        console.log("Initial Answer Elements:", answerElements);
+        console.log("Initial Answer Spans:", answerSpans);
+    </script>
+    <footer>
+        <p>All Rights Reserved by John WM Qiu © 2025</p>
+    </footer>
+</body>
+</html>
+
+
+

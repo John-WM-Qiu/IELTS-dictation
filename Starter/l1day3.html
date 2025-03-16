@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1场景词汇听写-Day3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        audio {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            white-space: pre-wrap;
+        }
+        .correct-answer {
+            color: green;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        .incorrect-answer {
+            color: red;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+        input.correct {
+            border-color: green;
+            border-style: solid;
+            border-width: 2px;
+        }
+        input.incorrect {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L1场景词汇-Day3听写练习</h1>
+    <audio controls>
+        <source src="l1day3.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div class="text-container" id="text-container">
+        1. (expedition)
+        
+        2. (hill)
+        
+        3. (gorge)
+        
+        4. (hiking)
+        
+        5. (a science museum)
+        
+        6. (marine life)
+        
+        7. (night club)
+        
+        8. (orchid)
+        
+        9. (holiday length)
+        
+        10. (a long train journey)
+        
+        11. (farm)
+        
+        12. (creature)
+        
+        13. (meadow)
+        
+        14. (an art museum)
+        
+        15. (the National Gallery)
+        
+        16. (aquarium)
+        
+        17. (keepsake)
+        
+        18. (whale cruise)
+        
+        19. (local walking club)
+        
+        20. (the British Museum)
+        
+        21. (local guide)
+        
+        22. (itinerary)
+        
+        23. (amusement park)
+        
+        24. (horse riding)
+        
+        25. (gallery)
+        
+        26. (cruise)
+        
+        27. (a zoological museum)
+        
+        28. (cathedral)
+        
+        29. (Royal Park)
+        
+        30. (outing)
+        
+        31. (camping)
+        
+        32. (barbeque)
+        
+        33. (knick-knack)
+        
+        34. (coral reef)
+        
+        35. (reptile park)
+        
+        36. (heritage)
+        
+        37. (historical site)
+        
+        38. (holiday)
+        
+        39. (organic farm)
+        
+        40. (coral) 
+ 
+    </div>
+
+    <button onclick="checkAnswers()">提交</button>
+
+    <script>
+        const correctAnswers = ["expedition", "hill", "gorge", "hiking", "a science museum", "marine life", "night club", "orchid", "holiday length", "a long train journey", "farm", "creature", "meadow", "an art museum", "the National Gallery", "aquarium", "keepsake", "whale cruise", "local walking club", "the British Museum", "local guide", "itinerary", "amusement park", "horse riding", "gallery", "cruise", "a zoological museum", "cathedral", "Royal Park", "outing", "camping", "barbeque", "knick-knack", "coral reef", "reptile park", "heritage", "historical site", "holiday", "organic farm", "coral"];
+        const answerElements = [];
+        const answerSpans = [];
+
+        // Insert input fields into the text container
+        let textContainer = document.getElementById('text-container');
+        let newTextContent = textContainer.innerHTML.replace(/\(([^)]+)\)/g, (match, p1, offset, string) => {
+            let input = document.createElement("input");
+            input.size = 15;
+            answerElements.push(input);
+
+            let span = document.createElement("span");
+            span.className = "correct-answer";
+            span.style.display = "none"; // Initially hide the correct answer
+            answerSpans.push(span);
+
+            return `${input.outerHTML} ${span.outerHTML}`;
+        });
+        textContainer.innerHTML = newTextContent;
+
+        // Re-query the input elements after setting innerHTML
+        answerElements.length = 0; // Clear the array
+        answerSpans.length = 0; // Clear the array
+        textContainer.querySelectorAll('input').forEach(input => {
+            answerElements.push(input);
+        });
+        textContainer.querySelectorAll('.correct-answer').forEach(span => {
+            answerSpans.push(span);
+        });
+
+        function checkAnswers() {
+            let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
+
+            console.log("User Answers:", userAnswers); // Debug log
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    answerElements[i].classList.add("correct");
+                    answerElements[i].classList.remove("incorrect");
+                } else {
+                    answerElements[i].classList.add("incorrect");
+                    answerElements[i].classList.remove("correct");
+                }
+
+                // Display the correct answer
+                answerSpans[i].textContent = `(${correctAnswers[i]})`;
+                answerSpans[i].style.display = "inline"; // Show the correct answer
+            }
+        }
+
+        // Log the elements to ensure they are correctly captured
+        console.log("Initial Answer Elements:", answerElements);
+        console.log("Initial Answer Spans:", answerSpans);
+    </script>
+    <footer>
+        <p>All Rights Reserved by John WM Qiu © 2025</p>
+    </footer>
+</body>
+</html>
+
+
+
