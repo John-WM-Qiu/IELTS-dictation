@@ -8,13 +8,14 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
-      font-size: 16px; /* 基础字号 */
+      font-size: 16px;
     }
     audio {
       margin-bottom: 20px;
     }
-    /* 计时显示区域 */
-    #timer {
+    /* 用于显示本次提交用时的区域，默认隐藏 */
+    #roundTimeDisplay {
+      display: none;
       font-size: 1.5em;
       font-weight: bold;
       margin-bottom: 20px;
@@ -23,14 +24,13 @@
       border: 1px solid #ccc;
       padding: 10px;
       min-height: 200px;
-      /* 使用 CSS Grid 布局实现三栏排列 */
+      /* CSS Grid 布局：默认三栏 */
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 20px;
       row-gap: 10px;
     }
     .dictation-item {
-      /* 保证每个听写项整体显示 */
       break-inside: avoid;
       padding: 5px;
     }
@@ -62,13 +62,12 @@
       text-align: center;
       padding: 10px 0;
     }
-    /* 响应式设计：屏幕宽度小于768px时，改为两栏布局 */
+    /* 响应式设计 */
     @media (max-width: 768px) {
       .text-container {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    /* 屏幕宽度小于480px时，改为单栏布局，并调整边距和字体大小 */
     @media (max-width: 480px) {
       .text-container {
         grid-template-columns: 1fr;
@@ -89,9 +88,9 @@
     <source src="l2day12.mp3" type="audio/mpeg">
     您的浏览器不支持 audio 元素。
   </audio>
-  
-  <!-- 计时模块显示区域 -->
-  <div id="timer">00:00:00</div>
+
+  <!-- 显示本次用时的区域，初始隐藏 -->
+  <div id="roundTimeDisplay"></div>
 
   <!-- 动态生成听写项的容器 -->
   <div class="text-container" id="text-container"></div>
@@ -99,7 +98,7 @@
   <button onclick="handleSubmit()">提交</button>
 
   <script>
-    // 听写单词数组：调整单词数量时，只需更新此数组即可
+    // 听写单词数组（需要增加或减少单词时，只需修改此数组即可）
     const correctAnswers = [
       "points", "placement test", "cooperation", "rewrite", "encyclopedia",
       "grades", "score", "card index", "log on", "analytical",
@@ -107,10 +106,10 @@
       "graduation appraisal", "textbook", "marks", "outline", "participation",
       "exemption", "student support", "revise", "auditor", "cut class",
       "technical vocabulary", "absence", "key terms and concepts", "mechanical", "fixed answers"
-      // 如需增加到50个单词，只需在此数组中添加相应项即可
+      // 如需扩展到50个单词，可在此数组后添加
     ];
 
-    // 动态生成听写项的代码
+    // 动态生成听写项
     const textContainer = document.getElementById('text-container');
     let htmlContent = '';
     correctAnswers.forEach((word, index) => {
@@ -125,37 +124,38 @@
     const answerElements = document.querySelectorAll('.dictation-item input');
     const answerSpans = document.querySelectorAll('.dictation-item .correct-answer');
 
-    /* 计时模块相关变量与函数 */
-    const timerDisplay = document.getElementById('timer');
+    /* 计时模块（后台隐藏计时） */
     let timerInterval;
-    let elapsedTime = 0;
+    let elapsedTime = 0; // 以秒计
 
-    // 启动计时器，每秒更新一次显示
+    // 启动计时器，每秒累加，但不更新页面显示
     function startTimer() {
       timerInterval = setInterval(function() {
         elapsedTime++;
-        const hours = Math.floor(elapsedTime / 3600);
-        const minutes = Math.floor((elapsedTime % 3600) / 60);
-        const seconds = elapsedTime % 60;
-        timerDisplay.textContent = 
-          (hours < 10 ? "0" + hours : hours) + ":" +
-          (minutes < 10 ? "0" + minutes : minutes) + ":" +
-          (seconds < 10 ? "0" + seconds : seconds);
       }, 1000);
     }
 
-    // 重置计时器：清除当前计时并重新启动
+    // 重置计时器：停止当前计时，并重新从0开始
     function resetTimer() {
       clearInterval(timerInterval);
       elapsedTime = 0;
-      timerDisplay.textContent = "00:00:00";
       startTimer();
+    }
+
+    // 将秒数转换为 hh:mm:ss 格式
+    function formatTime(seconds) {
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+      return (hours < 10 ? "0" + hours : hours) + ":" +
+             (minutes < 10 ? "0" + minutes : minutes) + ":" +
+             (secs < 10 ? "0" + secs : secs);
     }
 
     // 页面加载时启动计时器
     startTimer();
 
-    // 检查答案函数
+    // 检查答案函数（与之前逻辑一致）
     function checkAnswers() {
       answerElements.forEach((input, i) => {
         const userAnswer = input.value.toLowerCase().trim();
@@ -171,10 +171,19 @@
       });
     }
 
-    // 提交按钮的处理函数：检查答案并重置计时器
+    // 提交按钮处理函数：检查答案、显示本轮用时，然后重置计时器开始新一轮计时
     function handleSubmit() {
       checkAnswers();
-      resetTimer();
+      // 停止当前计时，获取本轮计时
+      clearInterval(timerInterval);
+      const roundTime = formatTime(elapsedTime);
+      // 显示本次听写用时（例如：“本次用时: 00:03:00”）
+      const roundTimeDisplay = document.getElementById('roundTimeDisplay');
+      roundTimeDisplay.style.display = "block";
+      roundTimeDisplay.textContent = "本次用时: " + roundTime;
+      // 立即重置计时器，新一轮计时开始（计时依然在后台，不显示）
+      elapsedTime = 0;
+      startTimer();
     }
   </script>
 
