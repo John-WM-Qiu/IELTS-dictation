@@ -8,6 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      font-size: 16px; /* 基础字号 */
     }
     audio {
       margin-bottom: 20px;
@@ -16,14 +17,14 @@
       border: 1px solid #ccc;
       padding: 10px;
       min-height: 200px;
-      /* 使用网格布局实现三栏排列 */
+      /* 默认采用三栏网格布局 */
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 20px;
       row-gap: 10px;
     }
     .dictation-item {
-      /* 防止项内内容拆分 */
+      /* 保证每个听写项整体显示 */
       break-inside: avoid;
       padding: 5px;
     }
@@ -46,12 +47,33 @@
     button {
       margin-top: 20px;
       margin-bottom: 20px;
+      font-size: 1em;
+      padding: 10px 20px;
     }
     footer {
       background-color: #333;
       color: #fff;
       text-align: center;
       padding: 10px 0;
+    }
+    /* 响应式设计：屏幕宽度小于768px时，改为两栏布局 */
+    @media (max-width: 768px) {
+      .text-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    /* 屏幕宽度小于480px时，改为单栏布局，并调整边距和字体大小 */
+    @media (max-width: 480px) {
+      .text-container {
+        grid-template-columns: 1fr;
+      }
+      body {
+        margin: 10px;
+        font-size: 14px;
+      }
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -62,64 +84,52 @@
     您的浏览器不支持 audio 元素。
   </audio>
 
-  <div class="text-container" id="text-container">
-    <div class="dictation-item">1. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">2. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">3. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">4. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">5. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">6. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">7. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">8. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">9. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">10. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">11. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">12. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">13. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">14. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">15. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">16. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">17. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">18. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">19. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">20. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">21. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">22. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">23. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">24. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">25. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">26. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">27. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">28. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">29. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-    <div class="dictation-item">30. <input type="text" size="15"> <span class="correct-answer" style="display:none;"></span></div>
-  </div>
+  <!-- 动态生成听写项的容器 -->
+  <div class="text-container" id="text-container"></div>
 
   <button onclick="checkAnswers()">提交</button>
 
   <script>
-    const correctAnswers = ["points", "placement test", "cooperation", "rewrite", "encyclopedia", "grades", "score", "card index", "log on", "analytical", "drop out", "final assessment", "circulation desk", "credit", "attendance", "graduation appraisal", "textbook", "marks", "outline", "participation", "exemption", "student support", "revise", "auditor", "cut class", "technical vocabulary", "absence", "key terms and concepts", "mechanical", "fixed answers"];
-    const answerElements = [];
-    const answerSpans = [];
+    // 听写单词数组：调整单词数量时，只需更新此数组
+    const correctAnswers = [
+      "points", "placement test", "cooperation", "rewrite", "encyclopedia",
+      "grades", "score", "card index", "log on", "analytical",
+      "drop out", "final assessment", "circulation desk", "credit", "attendance",
+      "graduation appraisal", "textbook", "marks", "outline", "participation",
+      "exemption", "student support", "revise", "auditor", "cut class",
+      "technical vocabulary", "absence", "key terms and concepts", "mechanical", "fixed answers"
+      // 如需增加到50个单词，只需在此数组中添加相应项即可
+    ];
 
-    // 获取所有听写项内的输入框和答案提示元素
-    document.querySelectorAll('.dictation-item input').forEach(input => answerElements.push(input));
-    document.querySelectorAll('.dictation-item .correct-answer').forEach(span => answerSpans.push(span));
+    // 获取容器对象并动态生成听写项
+    const textContainer = document.getElementById('text-container');
+    let htmlContent = '';
+    correctAnswers.forEach((word, index) => {
+      htmlContent += `<div class="dictation-item">
+                        ${index + 1}. <input type="text" size="15">
+                        <span class="correct-answer" style="display:none;"></span>
+                      </div>`;
+    });
+    textContainer.innerHTML = htmlContent;
 
+    // 获取所有输入框和正确答案提示元素
+    const answerElements = document.querySelectorAll('.dictation-item input');
+    const answerSpans = document.querySelectorAll('.dictation-item .correct-answer');
+
+    // 检查答案函数
     function checkAnswers() {
-      let userAnswers = answerElements.map(input => input.value.toLowerCase().trim());
-      for (let i = 0; i < userAnswers.length; i++) {
-        if (userAnswers[i] === correctAnswers[i]) {
-          answerElements[i].classList.add("correct");
-          answerElements[i].classList.remove("incorrect");
+      answerElements.forEach((input, i) => {
+        let userAnswer = input.value.toLowerCase().trim();
+        if (userAnswer === correctAnswers[i]) {
+          input.classList.add("correct");
+          input.classList.remove("incorrect");
         } else {
-          answerElements[i].classList.add("incorrect");
-          answerElements[i].classList.remove("correct");
+          input.classList.add("incorrect");
+          input.classList.remove("correct");
         }
-        // 显示正确答案
         answerSpans[i].textContent = "(" + correctAnswers[i] + ")";
         answerSpans[i].style.display = "inline";
-      }
+      });
     }
   </script>
 
