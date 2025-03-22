@@ -13,11 +13,17 @@
     audio {
       margin-bottom: 20px;
     }
+    /* 计时显示区域 */
+    #timer {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
     .text-container {
       border: 1px solid #ccc;
       padding: 10px;
       min-height: 200px;
-      /* 默认采用三栏网格布局 */
+      /* 使用 CSS Grid 布局实现三栏排列 */
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 20px;
@@ -83,14 +89,17 @@
     <source src="l2day12.mp3" type="audio/mpeg">
     您的浏览器不支持 audio 元素。
   </audio>
+  
+  <!-- 计时模块显示区域 -->
+  <div id="timer">00:00:00</div>
 
   <!-- 动态生成听写项的容器 -->
   <div class="text-container" id="text-container"></div>
 
-  <button onclick="checkAnswers()">提交</button>
+  <button onclick="handleSubmit()">提交</button>
 
   <script>
-    // 听写单词数组：调整单词数量时，只需更新此数组
+    // 听写单词数组：调整单词数量时，只需更新此数组即可
     const correctAnswers = [
       "points", "placement test", "cooperation", "rewrite", "encyclopedia",
       "grades", "score", "card index", "log on", "analytical",
@@ -101,7 +110,7 @@
       // 如需增加到50个单词，只需在此数组中添加相应项即可
     ];
 
-    // 获取容器对象并动态生成听写项
+    // 动态生成听写项的代码
     const textContainer = document.getElementById('text-container');
     let htmlContent = '';
     correctAnswers.forEach((word, index) => {
@@ -116,10 +125,40 @@
     const answerElements = document.querySelectorAll('.dictation-item input');
     const answerSpans = document.querySelectorAll('.dictation-item .correct-answer');
 
+    /* 计时模块相关变量与函数 */
+    const timerDisplay = document.getElementById('timer');
+    let timerInterval;
+    let elapsedTime = 0;
+
+    // 启动计时器，每秒更新一次显示
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        elapsedTime++;
+        const hours = Math.floor(elapsedTime / 3600);
+        const minutes = Math.floor((elapsedTime % 3600) / 60);
+        const seconds = elapsedTime % 60;
+        timerDisplay.textContent = 
+          (hours < 10 ? "0" + hours : hours) + ":" +
+          (minutes < 10 ? "0" + minutes : minutes) + ":" +
+          (seconds < 10 ? "0" + seconds : seconds);
+      }, 1000);
+    }
+
+    // 重置计时器：清除当前计时并重新启动
+    function resetTimer() {
+      clearInterval(timerInterval);
+      elapsedTime = 0;
+      timerDisplay.textContent = "00:00:00";
+      startTimer();
+    }
+
+    // 页面加载时启动计时器
+    startTimer();
+
     // 检查答案函数
     function checkAnswers() {
       answerElements.forEach((input, i) => {
-        let userAnswer = input.value.toLowerCase().trim();
+        const userAnswer = input.value.toLowerCase().trim();
         if (userAnswer === correctAnswers[i]) {
           input.classList.add("correct");
           input.classList.remove("incorrect");
@@ -130,6 +169,12 @@
         answerSpans[i].textContent = "(" + correctAnswers[i] + ")";
         answerSpans[i].style.display = "inline";
       });
+    }
+
+    // 提交按钮的处理函数：检查答案并重置计时器
+    function handleSubmit() {
+      checkAnswers();
+      resetTimer();
     }
   </script>
 
