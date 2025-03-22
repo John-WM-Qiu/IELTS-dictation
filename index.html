@@ -85,7 +85,6 @@
       background-color: #f0f0f0;
     }
     .more-button {
-      display: none;
       margin: 20px auto 0;
       padding: 8px 16px;
       background-color: #007bff;
@@ -94,6 +93,7 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 1em;
+      display: block;
     }
     .more-button:hover {
       background-color: #0056b3;
@@ -151,8 +151,8 @@
         <div class="link-item"><a href="./Intermediate/l2day9.html">L2高频场景听写-Day9</a></div>
         <div class="link-item"><a href="./Intermediate/l2day10.html">L2高频场景听写-Day10</a></div>
         <div class="link-item"><a href="./Intermediate/l2day11.html">L2高频场景听写-Day11</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day12.html">L2高频场景听写-Day12</a></div>
       </div>
-      <button class="more-button">更多</button>
     </div>
     <!-- 模块：L1高频场景听写 -->
     <div class="module">
@@ -169,7 +169,6 @@
         <div class="link-item"><a href="./Starter/l1day7.html">L1高频场景听写-Day7</a></div>
         <div class="link-item"><a href="./Starter/l1day8.html">L1高频场景听写-Day8</a></div>
       </div>
-      <!-- 当链接项数不超过9时，不显示“更多”按钮 -->
     </div>
   </div>
   <footer>
@@ -181,13 +180,16 @@
       modules.forEach(function(module) {
         var container = module.querySelector(".links-container");
         var items = container.querySelectorAll(".link-item");
-        var moreButton = module.querySelector(".more-button");
         if (items.length > 9) {
-          moreButton.style.display = "block";
+          // 如果项数超过9个，则动态生成“更多”按钮
+          var moreButton = document.createElement("button");
+          moreButton.className = "more-button";
+          moreButton.innerText = "更多";
           moreButton.addEventListener("click", function() {
             container.classList.add("expanded");
-            moreButton.style.display = "none";
+            moreButton.remove();
           });
+          module.appendChild(moreButton);
         }
       });
     });
