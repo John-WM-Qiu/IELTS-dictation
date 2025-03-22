@@ -47,27 +47,81 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .links-container {
-      margin-top: 20px;
+    .module {
+      margin-bottom: 40px;
       text-align: center;
     }
-    .link-item {
+    /* 使用 Grid 布局实现三栏效果 */
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-items: center;
+    }
+    /* 默认隐藏所有项 */
+    .links-container .link-item {
+      display: none;
+    }
+    /* 未展开时，仅显示前9个项 */
+    .links-container:not(.expanded) .link-item:nth-child(-n+9) {
       display: block;
-      margin: 10px 0;
+    }
+    /* 展开后显示所有项 */
+    .links-container.expanded .link-item {
+      display: block;
     }
     .link-item a {
       text-decoration: none;
       color: #007bff;
       font-weight: bold;
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .link-item a:hover {
-      text-decoration: underline;
+      background-color: #f0f0f0;
+    }
+    .more-button {
+      display: none;
+      margin: 20px auto 0;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .more-button:hover {
+      background-color: #0056b3;
     }
     footer {
       background-color: #333;
       color: #fff;
       text-align: center;
       padding: 10px 0;
+    }
+    /* 移动端响应式设计 */
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.1em;
+      }
+      .search-bar {
+        width: 100%;
+      }
+      /* 如有需要，可以调整为两栏或一栏 */
+      .links-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
   <link rel="icon" href="./img/icon.png" type="image/png">
@@ -80,38 +134,63 @@
     <div class="search-container">
       <input type="text" class="search-bar" placeholder="你今日背咗单词未啊？">
     </div>
-    <div class="section-title">
-      <h2>L2高频场景听写</h2>
+    <!-- 模块：L2高频场景听写 -->
+    <div class="module">
+      <div class="section-title">
+        <h2>L2高频场景听写</h2>
+      </div>
+      <div class="links-container">
+        <div class="link-item"><a href="./Intermediate/l2day1.html">L2高频场景听写-Day1</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day2.html">L2高频场景听写-Day2</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day3.html">L2高频场景听写-Day3</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day4.html">L2高频场景听写-Day4</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day5.html">L2高频场景听写-Day5</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day6.html">L2高频场景听写-Day6</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day7.html">L2高频场景听写-Day7</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day8.html">L2高频场景听写-Day8</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day9.html">L2高频场景听写-Day9</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day10.html">L2高频场景听写-Day10</a></div>
+        <div class="link-item"><a href="./Intermediate/l2day11.html">L2高频场景听写-Day11</a></div>
+      </div>
+      <button class="more-button">更多</button>
     </div>
-    <div class="links-container">
-      <div class="link-item"><a href="./Intermediate/l2day1.html">L2高频场景听写-Day1</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day2.html">L2高频场景听写-Day2</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day3.html">L2高频场景听写-Day3</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day4.html">L2高频场景听写-Day4</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day5.html">L2高频场景听写-Day5</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day6.html">L2高频场景听写-Day6</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day7.html">L2高频场景听写-Day7</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day8.html">L2高频场景听写-Day8</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day9.html">L2高频场景听写-Day9</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day10.html">L2高频场景听写-Day10</a></div>
-      <div class="link-item"><a href="./Intermediate/l2day11.html">L2高频场景听写-Day11</a></div>
-    </div>
-    <div class="section-title">
-      <h2>L1高频场景听写</h2>
-    </div>
-    <div class="links-container">
-      <div class="link-item"><a href="./Starter/l1day1.html">L1高频场景听写-Day1</a></div>
-      <div class="link-item"><a href="./Starter/l1day2.html">L1高频场景听写-Day2</a></div>
-      <div class="link-item"><a href="./Starter/l1day3.html">L1高频场景听写-Day3</a></div>
-      <div class="link-item"><a href="./Starter/l1day4.html">L1高频场景听写-Day4</a></div>
-      <div class="link-item"><a href="./Starter/l1day5.html">L1高频场景听写-Day5</a></div>
-      <div class="link-item"><a href="./Starter/l1day6.html">L1高频场景听写-Day6</a></div>
-      <div class="link-item"><a href="./Starter/l1day7.html">L1高频场景听写-Day7</a></div>
-      <div class="link-item"><a href="./Starter/l1day8.html">L1高频场景听写-Day8</a></div>
+    <!-- 模块：L1高频场景听写 -->
+    <div class="module">
+      <div class="section-title">
+        <h2>L1高频场景听写</h2>
+      </div>
+      <div class="links-container">
+        <div class="link-item"><a href="./Starter/l1day1.html">L1高频场景听写-Day1</a></div>
+        <div class="link-item"><a href="./Starter/l1day2.html">L1高频场景听写-Day2</a></div>
+        <div class="link-item"><a href="./Starter/l1day3.html">L1高频场景听写-Day3</a></div>
+        <div class="link-item"><a href="./Starter/l1day4.html">L1高频场景听写-Day4</a></div>
+        <div class="link-item"><a href="./Starter/l1day5.html">L1高频场景听写-Day5</a></div>
+        <div class="link-item"><a href="./Starter/l1day6.html">L1高频场景听写-Day6</a></div>
+        <div class="link-item"><a href="./Starter/l1day7.html">L1高频场景听写-Day7</a></div>
+        <div class="link-item"><a href="./Starter/l1day8.html">L1高频场景听写-Day8</a></div>
+      </div>
+      <!-- 当链接项数不超过9时，不显示“更多”按钮 -->
     </div>
   </div>
   <footer>
     <p>All Rights Reserved by John WM Qiu © 2025</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var modules = document.querySelectorAll(".module");
+      modules.forEach(function(module) {
+        var container = module.querySelector(".links-container");
+        var items = container.querySelectorAll(".link-item");
+        var moreButton = module.querySelector(".more-button");
+        if (items.length > 9) {
+          moreButton.style.display = "block";
+          moreButton.addEventListener("click", function() {
+            container.classList.add("expanded");
+            moreButton.style.display = "none";
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
