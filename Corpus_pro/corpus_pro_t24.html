@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpus名词听写Pro-T24</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      font-size: 16px;
+    }
+    audio {
+      margin-bottom: 20px;
+    }
+    /* 用于显示本次提交用时的区域，默认隐藏 */
+    #roundTimeDisplay {
+      display: none;
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .text-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 200px;
+      /* CSS Grid 布局：默认三栏 */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 10px;
+    }
+    .dictation-item {
+      break-inside: avoid;
+      padding: 5px;
+    }
+    .correct-answer {
+      color: green;
+      display: inline-block;
+      padding: 2px 5px;
+      margin-left: 5px;
+    }
+    input.correct {
+      border-color: green;
+      border-style: solid;
+      border-width: 2px;
+    }
+    input.incorrect {
+      border-color: red;
+      border-style: solid;
+      border-width: 2px;
+    }
+    button {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .text-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .text-container {
+        grid-template-columns: 1fr;
+      }
+      body {
+        margin: 10px;
+        font-size: 14px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Corpus名词听写Pro-T24</h1>
+  <audio controls>
+    <source src="corpus_pro_t24.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 元素。
+  </audio>
+
+  <!-- 显示本次用时的区域，初始隐藏 -->
+  <div id="roundTimeDisplay"></div>
+
+  <!-- 动态生成听写项的容器 -->
+  <div class="text-container" id="text-container"></div>
+
+  <button onclick="handleSubmit()">提交</button>
+
+  <script>
+    // 听写单词数组（需要增加或减少单词时，只需修改此数组即可）
+    const correctAnswers = ["scandal", "slip", "symptom", "syrup", "service", "sugar", "selection", "sign", "starter", "sauce", "sense", "second", "status", "space", "shade", "stock", "stability", "salads", "star", "southeast", "skating", "sale", "spider", "sponsor", "southwest", "speaking", "salad", "style", "steak", "sweater", "sleeping", "shoe", "season", "station", "single", "speed", "state", "size", "side", "shelter"];
+
+    // 动态生成听写项
+    const textContainer = document.getElementById('text-container');
+    let htmlContent = '';
+    correctAnswers.forEach((word, index) => {
+      htmlContent += `<div class="dictation-item">
+                        ${index + 1}. <input type="text" size="15">
+                        <span class="correct-answer" style="display:none;"></span>
+                      </div>`;
+    });
+    textContainer.innerHTML = htmlContent;
+
+    // 获取所有输入框和正确答案提示元素
+    const answerElements = document.querySelectorAll('.dictation-item input');
+    const answerSpans = document.querySelectorAll('.dictation-item .correct-answer');
+
+    /* 计时模块（后台隐藏计时） */
+    let timerInterval;
+    let elapsedTime = 0; // 以秒计
+
+    // 启动计时器，每秒累加，但不更新页面显示
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        elapsedTime++;
+      }, 1000);
+    }
+
+    // 重置计时器：停止当前计时，并重新从0开始
+    function resetTimer() {
+      clearInterval(timerInterval);
+      elapsedTime = 0;
+      startTimer();
+    }
+
+    // 将秒数转换为 hh:mm:ss 格式
+    function formatTime(seconds) {
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+      return (hours < 10 ? "0" + hours : hours) + ":" +
+             (minutes < 10 ? "0" + minutes : minutes) + ":" +
+             (secs < 10 ? "0" + secs : secs);
+    }
+
+    // 页面加载时启动计时器
+    startTimer();
+
+    // 检查答案函数（与之前逻辑一致）
+    function checkAnswers() {
+      answerElements.forEach((input, i) => {
+        const userAnswer = input.value.toLowerCase().trim();
+        if (userAnswer === correctAnswers[i]) {
+          input.classList.add("correct");
+          input.classList.remove("incorrect");
+        } else {
+          input.classList.add("incorrect");
+          input.classList.remove("correct");
+        }
+        answerSpans[i].textContent = "(" + correctAnswers[i] + ")";
+        answerSpans[i].style.display = "inline";
+      });
+    }
+
+    // 提交按钮处理函数：检查答案、显示本轮用时，然后重置计时器开始新一轮计时
+    function handleSubmit() {
+      checkAnswers();
+      // 停止当前计时，获取本轮计时
+      clearInterval(timerInterval);
+      const roundTime = formatTime(elapsedTime);
+      // 显示本次听写用时（例如：“本次用时: 00:03:00”）
+      const roundTimeDisplay = document.getElementById('roundTimeDisplay');
+      roundTimeDisplay.style.display = "block";
+      roundTimeDisplay.textContent = "本次用时: " + roundTime;
+      // 立即重置计时器，新一轮计时开始（计时依然在后台，不显示）
+      elapsedTime = 0;
+      startTimer();
+    }
+  </script>
+
+  <footer>
+    <p>All Rights Reserved by John WM Qiu © 2025</p>
+  </footer>
+</body>
+</html>
