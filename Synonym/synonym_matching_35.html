@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "difficult",
-                    answer: "I"
-                },
-                { 
-                    text: "press",
-                    answer: "B"
-                },
-                { 
-                    text: "movie",
-                    answer: "F"
-                },
-                { 
-                    text: "transfer",
+                    text: "tactics",
                     answer: "E"
                 },
                 { 
-                    text: "trend",
-                    answer: "A"
+                    text: "expertise",
+                    answer: "C"
+                },
+                { 
+                    text: "all ages",
+                    answer: "H"
+                },
+                { 
+                    text: "trust",
+                    answer: "F"
+                },
+                { 
+                    text: "learn",
+                    answer: "B"
                 }
             ],
             options: [
     
                 { 
-                    text: "likely",
+                    text: "before",
                     value: "A"
                 },
                 { 
-                    text: "newspaper",
+                    text: "get",
                     value: "B"
                 },
                 { 
-                    text: "corporation",
+                    text: "ability",
                     value: "C"
                 },
                 { 
-                    text: "colleges",
+                    text: "imagine",
                     value: "D"
                 },
                 { 
-                    text: "move",
+                    text: "method",
                     value: "E"
                 },
                 { 
-                    text: "documentary",
+                    text: "less suspicious",
                     value: "F"
                 },
                 { 
-                    text: "fall",
+                    text: "candidates",
                     value: "G"
                 },
                 { 
-                    text: "under",
+                    text: "young and old",
                     value: "H"
                 },
                 { 
-                    text: "hard",
+                    text: "firm",
                     value: "I"
                 }
             ]

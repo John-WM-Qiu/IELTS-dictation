@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "straightforward",
-                    answer: "F"
+                    text: "behind",
+                    answer: "G"
                 },
                 { 
-                    text: "out of date",
-                    answer: "H"
+                    text: "group",
+                    answer: "D"
                 },
                 { 
-                    text: "coastline",
+                    text: "result",
+                    answer: "I"
+                },
+                { 
+                    text: "ideal",
                     answer: "C"
                 },
                 { 
-                    text: "specialize in ",
+                    text: "country",
                     answer: "E"
-                },
-                { 
-                    text: "refurbish",
-                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "use",
+                    text: "make efforts",
                     value: "A"
                 },
                 { 
-                    text: "energy",
+                    text: "landscape",
                     value: "B"
                 },
                 { 
-                    text: "seaside",
+                    text: "perfect",
                     value: "C"
                 },
                 { 
-                    text: "redecorate",
+                    text: "team",
                     value: "D"
                 },
                 { 
-                    text: "concentrate",
+                    text: "economy (经济体)",
                     value: "E"
                 },
                 { 
-                    text: "direct",
+                    text: "go up",
                     value: "F"
                 },
                 { 
-                    text: "tourism",
+                    text: "rear",
                     value: "G"
                 },
                 { 
-                    text: "outdated",
+                    text: "live",
                     value: "H"
                 },
                 { 
-                    text: "firm",
+                    text: "consequence",
                     value: "I"
                 }
             ]

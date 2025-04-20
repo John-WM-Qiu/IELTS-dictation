@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "administer",
-                    answer: "C"
-                },
-                { 
-                    text: "opportunity",
+                    text: "urban",
                     answer: "E"
                 },
                 { 
-                    text: "rigorous",
+                    text: "cheap",
+                    answer: "C"
+                },
+                { 
+                    text: "talent",
                     answer: "I"
                 },
                 { 
-                    text: "diversity",
+                    text: "ideal",
                     answer: "F"
                 },
                 { 
-                    text: "double",
+                    text: "preference",
                     answer: "G"
                 }
             ],
             options: [
     
                 { 
-                    text: "loads of",
+                    text: "make efforts",
                     value: "A"
                 },
                 { 
-                    text: "thank-you present",
+                    text: "example",
                     value: "B"
                 },
                 { 
-                    text: "be in charge of",
+                    text: "not break the bank",
                     value: "C"
                 },
                 { 
-                    text: "spot",
+                    text: "cinema",
                     value: "D"
                 },
                 { 
-                    text: "hope",
+                    text: "city",
                     value: "E"
                 },
                 { 
-                    text: "different",
+                    text: "perfect",
                     value: "F"
                 },
                 { 
-                    text: "twice",
+                    text: "priority",
                     value: "G"
                 },
                 { 
-                    text: "tourism",
+                    text: "along with",
                     value: "H"
                 },
                 { 
-                    text: "demanding",
+                    text: "gift",
                     value: "I"
                 }
             ]

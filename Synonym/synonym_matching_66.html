@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "durable",
-                    answer: "G"
-                },
-                { 
-                    text: "disappear",
+                    text: "respect",
                     answer: "E"
                 },
                 { 
-                    text: "disused",
-                    answer: "D"
+                    text: "noisy",
+                    answer: "F"
                 },
                 { 
-                    text: "try hard",
-                    answer: "H"
+                    text: "country",
+                    answer: "C"
                 },
                 { 
-                    text: "education",
+                    text: "detract from",
                     answer: "A"
+                },
+                { 
+                    text: "online",
+                    answer: "H"
                 }
             ],
             options: [
     
                 { 
-                    text: "schools",
+                    text: "negative effect",
                     value: "A"
                 },
                 { 
-                    text: "cliff",
+                    text: "fix",
                     value: "B"
                 },
                 { 
-                    text: "undergraduate",
+                    text: "economy (经济体)",
                     value: "C"
                 },
                 { 
-                    text: "derelict",
+                    text: "dorm",
                     value: "D"
                 },
                 { 
-                    text: "last one",
+                    text: "dignity",
                     value: "E"
                 },
                 { 
-                    text: "like",
+                    text: "disturbing",
                     value: "F"
                 },
                 { 
-                    text: "longer",
+                    text: "ferry",
                     value: "G"
                 },
                 { 
-                    text: "make efforts",
+                    text: "Internet",
                     value: "H"
                 },
                 { 
-                    text: "concentrate",
+                    text: "go up",
                     value: "I"
                 }
             ]

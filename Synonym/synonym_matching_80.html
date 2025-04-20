@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "free gift",
-                    answer: "A"
+                    text: "majority",
+                    answer: "G"
                 },
                 { 
-                    text: "clothes",
-                    answer: "E"
+                    text: "allergic",
+                    answer: "D"
                 },
                 { 
-                    text: "newest",
+                    text: "pollutant",
                     answer: "B"
                 },
                 { 
-                    text: "associate",
-                    answer: "C"
+                    text: "maximum",
+                    answer: "I"
                 },
                 { 
-                    text: "movie",
-                    answer: "I"
+                    text: "amount of",
+                    answer: "A"
                 }
             ],
             options: [
     
                 { 
-                    text: "thank-you present",
+                    text: "loads of",
                     value: "A"
                 },
                 { 
-                    text: "latest",
+                    text: "contaminant",
                     value: "B"
                 },
                 { 
-                    text: "connect",
+                    text: "as",
                     value: "C"
                 },
                 { 
-                    text: "assistance",
+                    text: "can't eat",
                     value: "D"
                 },
                 { 
-                    text: "outfits",
+                    text: "cut down",
                     value: "E"
                 },
                 { 
-                    text: "switch",
+                    text: "living",
                     value: "F"
                 },
                 { 
-                    text: "energy",
+                    text: "most",
                     value: "G"
                 },
                 { 
-                    text: "dynamic",
+                    text: "go up",
                     value: "H"
                 },
                 { 
-                    text: "motion picture",
+                    text: "greatest value",
                     value: "I"
                 }
             ]

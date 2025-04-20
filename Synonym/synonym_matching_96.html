@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "double",
-                    answer: "H"
-                },
-                { 
-                    text: "turn",
+                    text: "poor",
                     answer: "D"
                 },
                 { 
-                    text: "minimum",
+                    text: "talent",
+                    answer: "F"
+                },
+                { 
+                    text: "repetition",
+                    answer: "C"
+                },
+                { 
+                    text: "adapt",
+                    answer: "G"
+                },
+                { 
+                    text: "artwork",
                     answer: "A"
-                },
-                { 
-                    text: "eat",
-                    answer: "E"
-                },
-                { 
-                    text: "student",
-                    answer: "B"
                 }
             ],
             options: [
     
                 { 
-                    text: "at least",
+                    text: "drawing",
                     value: "A"
                 },
                 { 
-                    text: "postgraduate",
+                    text: "single",
                     value: "B"
                 },
                 { 
-                    text: "satellite",
+                    text: "over and over",
                     value: "C"
                 },
                 { 
-                    text: "switch",
+                    text: "weak",
                     value: "D"
                 },
                 { 
-                    text: "ingest",
+                    text: "improve",
                     value: "E"
                 },
                 { 
-                    text: "display",
+                    text: "gift",
                     value: "F"
                 },
                 { 
-                    text: "image,",
+                    text: "alter",
                     value: "G"
                 },
                 { 
-                    text: "twice",
+                    text: "bone",
                     value: "H"
                 },
                 { 
-                    text: "rapid",
+                    text: "every year",
                     value: "I"
                 }
             ]

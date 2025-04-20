@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "student",
+                    text: "transfer",
+                    answer: "E"
+                },
+                { 
+                    text: "disused",
+                    answer: "G"
+                },
+                { 
+                    text: "donate",
                     answer: "D"
                 },
                 { 
-                    text: "majority",
-                    answer: "I"
+                    text: "information",
+                    answer: "C"
                 },
                 { 
-                    text: "energetic",
-                    answer: "A"
-                },
-                { 
-                    text: "pollutant",
+                    text: "care",
                     answer: "B"
-                },
-                { 
-                    text: "handle",
-                    answer: "G"
                 }
             ],
             options: [
     
                 { 
-                    text: "vigorous",
+                    text: "curve",
                     value: "A"
                 },
                 { 
-                    text: "fume",
+                    text: "caution",
                     value: "B"
                 },
                 { 
-                    text: "possibility",
+                    text: "date",
                     value: "C"
                 },
                 { 
-                    text: "pupil",
+                    text: "charity",
                     value: "D"
                 },
                 { 
-                    text: "perceive",
+                    text: "relocate",
                     value: "E"
                 },
                 { 
-                    text: "upheaval",
+                    text: "public awareness (公众认知)",
                     value: "F"
                 },
                 { 
-                    text: "work out",
+                    text: "derelict",
                     value: "G"
                 },
                 { 
-                    text: "benefit",
+                    text: "obvious",
                     value: "H"
                 },
                 { 
-                    text: "most",
+                    text: "Internet",
                     value: "I"
                 }
             ]

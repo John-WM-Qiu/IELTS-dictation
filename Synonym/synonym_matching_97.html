@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "find",
-                    answer: "C"
+                    text: "remain",
+                    answer: "F"
                 },
                 { 
-                    text: "warning",
-                    answer: "A"
+                    text: "repetition",
+                    answer: "E"
                 },
                 { 
-                    text: "feedback",
-                    answer: "H"
+                    text: "accurately",
+                    answer: "D"
                 },
                 { 
-                    text: "advance",
+                    text: "restrict",
                     answer: "B"
                 },
                 { 
-                    text: "renovate",
-                    answer: "I"
+                    text: "show",
+                    answer: "H"
                 }
             ],
             options: [
     
                 { 
-                    text: "alarm",
+                    text: "time pressure",
                     value: "A"
                 },
                 { 
-                    text: "finding",
+                    text: "limit",
                     value: "B"
                 },
                 { 
-                    text: "discover",
+                    text: "most",
                     value: "C"
                 },
                 { 
-                    text: "by",
+                    text: "precisely",
                     value: "D"
                 },
                 { 
-                    text: "isolated",
+                    text: "over and over",
                     value: "E"
                 },
                 { 
-                    text: "imagine",
+                    text: "surviving (留下的，幸存的)",
                     value: "F"
                 },
                 { 
-                    text: "conclusion",
+                    text: "journals",
                     value: "G"
                 },
                 { 
-                    text: "advice",
+                    text: "label",
                     value: "H"
                 },
                 { 
-                    text: "fix",
+                    text: "revert",
                     value: "I"
                 }
             ]

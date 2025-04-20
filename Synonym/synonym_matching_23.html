@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "update",
-                    answer: "D"
-                },
-                { 
-                    text: "typical",
+                    text: "outdoor",
                     answer: "B"
                 },
                 { 
-                    text: "permanent",
-                    answer: "A"
+                    text: "contemporary",
+                    answer: "G"
                 },
                 { 
-                    text: "hardworking",
+                    text: "all ages",
+                    answer: "E"
+                },
+                { 
+                    text: "at present",
                     answer: "C"
                 },
                 { 
-                    text: "initial",
-                    answer: "H"
+                    text: "country",
+                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "long-lasting",
+                    text: "depend on",
                     value: "A"
                 },
                 { 
-                    text: "common",
+                    text: "park",
                     value: "B"
                 },
                 { 
-                    text: "industriousness",
+                    text: "existing",
                     value: "C"
                 },
                 { 
-                    text: "upgrade",
+                    text: "economy (经济体)",
                     value: "D"
                 },
                 { 
-                    text: "caution",
+                    text: "young and old",
                     value: "E"
                 },
                 { 
-                    text: "active",
+                    text: "leave … behind",
                     value: "F"
                 },
                 { 
-                    text: "chill",
+                    text: "back then",
                     value: "G"
                 },
                 { 
-                    text: "premiere",
+                    text: "prepare refreshment",
                     value: "H"
                 },
                 { 
-                    text: "section",
+                    text: "use",
                     value: "I"
                 }
             ]

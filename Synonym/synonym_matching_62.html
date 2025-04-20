@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "limited",
-                    answer: "I"
-                },
-                { 
-                    text: "majority",
-                    answer: "F"
-                },
-                { 
-                    text: "student",
-                    answer: "C"
-                },
-                { 
-                    text: "group",
-                    answer: "E"
-                },
-                { 
-                    text: "have to",
+                    text: "omit",
                     answer: "H"
+                },
+                { 
+                    text: "trend",
+                    answer: "G"
+                },
+                { 
+                    text: "function",
+                    answer: "B"
+                },
+                { 
+                    text: "enhance",
+                    answer: "A"
+                },
+                { 
+                    text: "protect",
+                    answer: "C"
                 }
             ],
             options: [
     
                 { 
-                    text: "over and over",
+                    text: "improve",
                     value: "A"
                 },
                 { 
-                    text: "development",
+                    text: "use",
                     value: "B"
                 },
                 { 
-                    text: "undergraduate",
+                    text: "shelter",
                     value: "C"
                 },
                 { 
-                    text: "amusement",
+                    text: "skill",
                     value: "D"
                 },
                 { 
-                    text: "team",
+                    text: "various",
                     value: "E"
                 },
                 { 
-                    text: "most",
+                    text: "just a few",
                     value: "F"
                 },
                 { 
-                    text: "relocate",
+                    text: "likely",
                     value: "G"
                 },
                 { 
-                    text: "be supposed to",
+                    text: "leave out",
                     value: "H"
                 },
                 { 
-                    text: "just a few",
+                    text: "energy",
                     value: "I"
                 }
             ]

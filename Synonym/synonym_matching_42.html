@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "mate",
-                    answer: "I"
+                    text: "rigorous",
+                    answer: "G"
                 },
                 { 
-                    text: "near",
+                    text: "emigrate",
+                    answer: "D"
+                },
+                { 
+                    text: "staff",
                     answer: "B"
                 },
                 { 
-                    text: "result",
+                    text: "specialize in ",
                     answer: "F"
                 },
                 { 
-                    text: "maximum",
-                    answer: "H"
-                },
-                { 
-                    text: "request",
-                    answer: "G"
+                    text: "try hard",
+                    answer: "I"
                 }
             ],
             options: [
     
                 { 
-                    text: "begin",
+                    text: "room",
                     value: "A"
                 },
                 { 
-                    text: "vicinity",
+                    text: "employee",
                     value: "B"
                 },
                 { 
-                    text: "method",
+                    text: "cliff",
                     value: "C"
                 },
                 { 
-                    text: "in the future",
+                    text: "go away",
                     value: "D"
                 },
                 { 
-                    text: "data",
+                    text: "especially",
                     value: "E"
                 },
                 { 
-                    text: "consequence",
+                    text: "emphasis",
                     value: "F"
                 },
                 { 
-                    text: "ask for",
+                    text: "demanding",
                     value: "G"
                 },
                 { 
-                    text: "upper limit",
+                    text: "such as",
                     value: "H"
                 },
                 { 
-                    text: "peer",
+                    text: "hard working",
                     value: "I"
                 }
             ]

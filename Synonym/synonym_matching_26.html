@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "free gift",
+                    text: "minimum",
+                    answer: "D"
+                },
+                { 
+                    text: "boring",
                     answer: "C"
                 },
                 { 
-                    text: "smoke",
-                    answer: "E"
-                },
-                { 
-                    text: "permanent",
+                    text: "establish",
                     answer: "F"
                 },
                 { 
-                    text: "discount",
-                    answer: "H"
+                    text: "straightforward",
+                    answer: "G"
                 },
                 { 
-                    text: "difficult",
-                    answer: "G"
+                    text: "demonstrate",
+                    answer: "I"
                 }
             ],
             options: [
     
                 { 
-                    text: "boredom",
+                    text: "magazines",
                     value: "A"
                 },
                 { 
-                    text: "budget",
+                    text: "cause",
                     value: "B"
                 },
                 { 
-                    text: "thank-you present",
+                    text: "not interesting",
                     value: "C"
                 },
                 { 
-                    text: "not far from",
+                    text: "at least",
                     value: "D"
                 },
                 { 
-                    text: "smog",
+                    text: "location",
                     value: "E"
                 },
                 { 
-                    text: "long-lasting",
+                    text: "create",
                     value: "F"
                 },
                 { 
-                    text: "problem",
+                    text: "direct",
                     value: "G"
                 },
                 { 
-                    text: "10% off",
+                    text: "repeat",
                     value: "H"
                 },
                 { 
-                    text: "swift",
+                    text: "show",
                     value: "I"
                 }
             ]

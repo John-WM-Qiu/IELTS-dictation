@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "adjust",
-                    answer: "D"
+                    text: "steal",
+                    answer: "C"
                 },
                 { 
-                    text: "double",
-                    answer: "I"
-                },
-                { 
-                    text: "extensive",
+                    text: "work",
                     answer: "H"
                 },
                 { 
-                    text: "order",
+                    text: "transparent",
+                    answer: "D"
+                },
+                { 
+                    text: "habitat",
                     answer: "B"
                 },
                 { 
-                    text: "trust",
-                    answer: "F"
+                    text: "analysis",
+                    answer: "E"
                 }
             ],
             options: [
     
                 { 
-                    text: "use",
+                    text: "perform",
                     value: "A"
                 },
                 { 
-                    text: "sequence",
+                    text: "live",
                     value: "B"
                 },
                 { 
-                    text: "economy (经济体)",
+                    text: "theft",
                     value: "C"
                 },
                 { 
-                    text: "modify",
+                    text: "obvious",
                     value: "D"
                 },
                 { 
-                    text: "ahead",
+                    text: "know",
                     value: "E"
                 },
                 { 
-                    text: "believe",
+                    text: "transform",
                     value: "F"
                 },
                 { 
-                    text: "rapid",
+                    text: "jewel",
                     value: "G"
                 },
                 { 
-                    text: "a wide range of",
+                    text: "item",
                     value: "H"
                 },
                 { 
-                    text: "twice",
+                    text: "colleges",
                     value: "I"
                 }
             ]

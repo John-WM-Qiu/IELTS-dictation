@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "beside",
-                    answer: "H"
+                    text: "rigorous",
+                    answer: "B"
                 },
                 { 
-                    text: "geology",
+                    text: "continue",
                     answer: "D"
                 },
                 { 
-                    text: "unusual",
+                    text: "ancient",
                     answer: "G"
                 },
                 { 
-                    text: "expertise",
-                    answer: "A"
+                    text: "movie",
+                    answer: "E"
                 },
                 { 
-                    text: "export",
-                    answer: "C"
+                    text: "travel",
+                    answer: "F"
                 }
             ],
             options: [
     
                 { 
-                    text: "ability",
+                    text: "trait",
                     value: "A"
                 },
                 { 
-                    text: "energy",
+                    text: "demanding",
                     value: "B"
                 },
                 { 
-                    text: "abroad",
+                    text: "location",
                     value: "C"
                 },
                 { 
-                    text: "fossil",
+                    text: "keep on doing",
                     value: "D"
                 },
                 { 
-                    text: "create",
+                    text: "cinema",
                     value: "E"
                 },
                 { 
-                    text: "simple",
+                    text: "flight",
                     value: "F"
                 },
                 { 
-                    text: "unique",
+                    text: "medieval",
                     value: "G"
                 },
                 { 
-                    text: "by",
+                    text: "convert",
                     value: "H"
                 },
                 { 
-                    text: "frequent",
+                    text: "vehicle",
                     value: "I"
                 }
             ]

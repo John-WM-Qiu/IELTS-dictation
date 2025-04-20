@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "beside",
-                    answer: "B"
-                },
-                { 
-                    text: "e.g.",
-                    answer: "A"
-                },
-                { 
-                    text: "fee",
+                    text: "remain",
                     answer: "D"
                 },
                 { 
-                    text: "care",
-                    answer: "G"
+                    text: "purpose",
+                    answer: "E"
                 },
                 { 
-                    text: "rely on",
-                    answer: "C"
+                    text: "shorten",
+                    answer: "I"
+                },
+                { 
+                    text: "update",
+                    answer: "H"
+                },
+                { 
+                    text: "specific",
+                    answer: "B"
                 }
             ],
             options: [
     
                 { 
-                    text: "including",
+                    text: "data",
                     value: "A"
                 },
                 { 
-                    text: "border",
+                    text: "example",
                     value: "B"
                 },
                 { 
-                    text: "depend on",
+                    text: "convert",
                     value: "C"
                 },
                 { 
-                    text: "expense",
+                    text: "wreck (残货，沉船漂浮物)",
                     value: "D"
                 },
                 { 
-                    text: "a number of",
+                    text: "aim",
                     value: "E"
                 },
                 { 
-                    text: "energy",
+                    text: "curve",
                     value: "F"
                 },
                 { 
-                    text: "caution",
+                    text: "dwelling",
                     value: "G"
                 },
                 { 
-                    text: "website",
+                    text: "more current",
                     value: "H"
                 },
                 { 
-                    text: "thank-you present",
+                    text: "cut down",
                     value: "I"
                 }
             ]

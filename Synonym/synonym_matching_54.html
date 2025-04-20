@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "transfer",
-                    answer: "D"
-                },
-                { 
-                    text: "poisonous",
-                    answer: "F"
-                },
-                { 
-                    text: "reserve",
-                    answer: "H"
-                },
-                { 
-                    text: "expand",
+                    text: "minimum",
                     answer: "B"
                 },
                 { 
-                    text: "restrict",
-                    answer: "E"
+                    text: "near",
+                    answer: "F"
+                },
+                { 
+                    text: "injury",
+                    answer: "C"
+                },
+                { 
+                    text: "copy",
+                    answer: "G"
+                },
+                { 
+                    text: "find",
+                    answer: "H"
                 }
             ],
             options: [
     
                 { 
-                    text: "ahead",
+                    text: "daily",
                     value: "A"
                 },
                 { 
-                    text: "add",
+                    text: "at least",
                     value: "B"
                 },
                 { 
-                    text: "worker",
+                    text: "harm",
                     value: "C"
                 },
                 { 
-                    text: "relocate",
+                    text: "twice",
                     value: "D"
                 },
                 { 
-                    text: "limit",
+                    text: "get",
                     value: "E"
                 },
                 { 
-                    text: "toxic",
+                    text: "close",
                     value: "F"
                 },
                 { 
-                    text: "four weeks",
+                    text: "reproduce",
                     value: "G"
                 },
                 { 
-                    text: "book",
+                    text: "spot",
                     value: "H"
                 },
                 { 
-                    text: "rapid",
+                    text: "spoil",
                     value: "I"
                 }
             ]

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "ideal",
-                    answer: "D"
-                },
-                { 
-                    text: "advance",
-                    answer: "C"
-                },
-                { 
-                    text: "permanent",
-                    answer: "B"
-                },
-                { 
-                    text: "group",
+                    text: "show",
                     answer: "A"
                 },
                 { 
-                    text: "limited",
+                    text: "but",
+                    answer: "E"
+                },
+                { 
+                    text: "improve",
                     answer: "I"
+                },
+                { 
+                    text: "function",
+                    answer: "H"
+                },
+                { 
+                    text: "habitat",
+                    answer: "B"
                 }
             ],
             options: [
     
                 { 
-                    text: "crew",
+                    text: "label",
                     value: "A"
                 },
                 { 
-                    text: "long-lasting",
+                    text: "territory",
                     value: "B"
                 },
                 { 
-                    text: "growth",
+                    text: "border",
                     value: "C"
                 },
                 { 
-                    text: "perfect",
+                    text: "type",
                     value: "D"
                 },
                 { 
-                    text: "for",
+                    text: "however",
                     value: "E"
                 },
                 { 
-                    text: "not break the bank",
+                    text: "fix",
                     value: "F"
                 },
                 { 
-                    text: "pupil",
+                    text: "priority",
                     value: "G"
                 },
                 { 
-                    text: "neglect",
+                    text: "purpose",
                     value: "H"
                 },
                 { 
-                    text: "not many",
+                    text: "promote",
                     value: "I"
                 }
             ]

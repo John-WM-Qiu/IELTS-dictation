@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "establish",
+                    text: "handy",
                     answer: "E"
                 },
                 { 
-                    text: "information",
-                    answer: "A"
+                    text: "demonstrate",
+                    answer: "B"
                 },
                 { 
-                    text: "transfer",
+                    text: "place",
                     answer: "H"
                 },
                 { 
-                    text: "deadline",
+                    text: "contemporary",
                     answer: "I"
                 },
                 { 
-                    text: "more than",
-                    answer: "D"
+                    text: "access",
+                    answer: "F"
                 }
             ],
             options: [
     
                 { 
-                    text: "details",
+                    text: "help",
                     value: "A"
                 },
                 { 
-                    text: "overseas",
+                    text: "show",
                     value: "B"
                 },
                 { 
-                    text: "link",
+                    text: "believe",
                     value: "C"
                 },
                 { 
-                    text: "exceed",
+                    text: "fall",
                     value: "D"
                 },
                 { 
-                    text: "create",
+                    text: "convenient",
                     value: "E"
                 },
                 { 
-                    text: "hard working",
+                    text: "use",
                     value: "F"
                 },
                 { 
-                    text: "cross-border",
+                    text: "rocket",
                     value: "G"
                 },
                 { 
-                    text: "move",
+                    text: "spot",
                     value: "H"
                 },
                 { 
-                    text: "time pressure",
+                    text: "back then",
                     value: "I"
                 }
             ]

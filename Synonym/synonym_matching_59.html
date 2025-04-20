@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -107,61 +125,61 @@
     
                 { 
                     text: "lack",
-                    answer: "E"
-                },
-                { 
-                    text: "pattern",
-                    answer: "H"
-                },
-                { 
-                    text: "tactics",
-                    answer: "C"
+                    answer: "D"
                 },
                 { 
                     text: "motivate",
-                    answer: "A"
+                    answer: "E"
                 },
                 { 
-                    text: "near",
-                    answer: "F"
+                    text: "allergic",
+                    answer: "I"
+                },
+                { 
+                    text: "omit",
+                    answer: "C"
+                },
+                { 
+                    text: "emigrate",
+                    answer: "A"
                 }
             ],
             options: [
     
                 { 
-                    text: "help",
+                    text: "move",
                     value: "A"
                 },
                 { 
-                    text: "neighbourhood",
+                    text: "charity",
                     value: "B"
                 },
                 { 
-                    text: "method",
+                    text: "cancel",
                     value: "C"
                 },
                 { 
-                    text: "like",
+                    text: "not enough",
                     value: "D"
                 },
                 { 
-                    text: "fewer",
+                    text: "encourage",
                     value: "E"
                 },
                 { 
-                    text: "nearby",
+                    text: "a number of",
                     value: "F"
                 },
                 { 
-                    text: "young and old",
+                    text: "ahead",
                     value: "G"
                 },
                 { 
-                    text: "regularity",
+                    text: "drawing",
                     value: "H"
                 },
                 { 
-                    text: "up side",
+                    text: "allergy",
                     value: "I"
                 }
             ]

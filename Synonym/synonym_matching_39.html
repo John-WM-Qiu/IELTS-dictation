@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "transport",
-                    answer: "G"
-                },
-                { 
-                    text: "classify",
-                    answer: "D"
-                },
-                { 
-                    text: "boring",
-                    answer: "I"
-                },
-                { 
-                    text: "extensive",
+                    text: "organize",
                     answer: "H"
                 },
                 { 
-                    text: "place",
-                    answer: "B"
+                    text: "education",
+                    answer: "F"
+                },
+                { 
+                    text: "disadvantage",
+                    answer: "E"
+                },
+                { 
+                    text: "near",
+                    answer: "D"
+                },
+                { 
+                    text: "typical",
+                    answer: "A"
                 }
             ],
             options: [
     
                 { 
-                    text: "outcome",
+                    text: "common",
                     value: "A"
                 },
                 { 
-                    text: "where",
+                    text: "conclusion",
                     value: "B"
                 },
                 { 
-                    text: "rapid",
+                    text: "boy",
                     value: "C"
                 },
                 { 
-                    text: "kind",
+                    text: "adjacent",
                     value: "D"
                 },
                 { 
-                    text: "open air",
+                    text: "problem",
                     value: "E"
                 },
                 { 
-                    text: "distant",
+                    text: "institution",
                     value: "F"
                 },
                 { 
-                    text: "train",
+                    text: "concentrate",
                     value: "G"
                 },
                 { 
-                    text: "a wide range of",
+                    text: "plan",
                     value: "H"
                 },
                 { 
-                    text: "not interesting",
+                    text: "damage",
                     value: "I"
                 }
             ]

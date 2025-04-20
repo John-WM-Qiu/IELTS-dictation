@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "order",
-                    answer: "A"
+                    text: "improve",
+                    answer: "F"
                 },
                 { 
-                    text: "talent",
+                    text: "part",
                     answer: "I"
                 },
                 { 
-                    text: "transfer",
-                    answer: "H"
+                    text: "hardworking",
+                    answer: "A"
                 },
                 { 
-                    text: "group",
-                    answer: "B"
+                    text: "renovate",
+                    answer: "G"
                 },
                 { 
-                    text: "space travel",
-                    answer: "E"
+                    text: "military",
+                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "sequence",
+                    text: "industriousness",
                     value: "A"
                 },
                 { 
-                    text: "crew",
+                    text: "shift",
                     value: "B"
                 },
                 { 
-                    text: "dangerous",
+                    text: "plants",
                     value: "C"
                 },
                 { 
-                    text: "small",
+                    text: "not peaceful",
                     value: "D"
                 },
                 { 
-                    text: "aircraft",
+                    text: "laptop",
                     value: "E"
                 },
                 { 
-                    text: "fame",
+                    text: "promote",
                     value: "F"
                 },
                 { 
-                    text: "above",
+                    text: "repair",
                     value: "G"
                 },
                 { 
-                    text: "relocate",
+                    text: "item",
                     value: "H"
                 },
                 { 
-                    text: "aptitude",
+                    text: "percent",
                     value: "I"
                 }
             ]

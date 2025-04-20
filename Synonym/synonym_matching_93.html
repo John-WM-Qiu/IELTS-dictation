@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "tactics",
-                    answer: "F"
-                },
-                { 
-                    text: "talent",
-                    answer: "B"
-                },
-                { 
-                    text: "vegetation",
+                    text: "place",
                     answer: "H"
                 },
                 { 
-                    text: "countryside",
-                    answer: "C"
+                    text: "all ages",
+                    answer: "B"
                 },
                 { 
-                    text: "food",
+                    text: "sale",
                     answer: "A"
+                },
+                { 
+                    text: "visualize",
+                    answer: "E"
+                },
+                { 
+                    text: "transfer",
+                    answer: "C"
                 }
             ],
             options: [
     
                 { 
-                    text: "feed on",
+                    text: "retail",
                     value: "A"
                 },
                 { 
-                    text: "gift",
+                    text: "young and old",
                     value: "B"
                 },
                 { 
-                    text: "rural area",
+                    text: "relocate",
                     value: "C"
                 },
                 { 
-                    text: "underestimate",
+                    text: "rare",
                     value: "D"
                 },
                 { 
-                    text: "participants",
+                    text: "imagine",
                     value: "E"
                 },
                 { 
-                    text: "strategy",
+                    text: "type",
                     value: "F"
                 },
                 { 
-                    text: "early on",
+                    text: "aim",
                     value: "G"
                 },
                 { 
-                    text: "plants",
+                    text: "area",
                     value: "H"
                 },
                 { 
-                    text: "definitive",
+                    text: "reproduce",
                     value: "I"
                 }
             ]

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "steal",
-                    answer: "D"
+                    text: "and ",
+                    answer: "F"
                 },
                 { 
-                    text: "advantage",
-                    answer: "I"
-                },
-                { 
-                    text: "straightforward",
-                    answer: "C"
-                },
-                { 
-                    text: "group",
+                    text: "cheap",
                     answer: "B"
                 },
                 { 
-                    text: "transport",
-                    answer: "G"
+                    text: "advance",
+                    answer: "E"
+                },
+                { 
+                    text: "forget to take",
+                    answer: "I"
+                },
+                { 
+                    text: "reference materials",
+                    answer: "C"
                 }
             ],
             options: [
     
                 { 
-                    text: "different kinds of relationship",
+                    text: "book",
                     value: "A"
                 },
                 { 
-                    text: "crew",
+                    text: "not break the bank",
                     value: "B"
                 },
                 { 
-                    text: "first-hand",
+                    text: "books",
                     value: "C"
                 },
                 { 
-                    text: "theft",
+                    text: "long-lasting",
                     value: "D"
                 },
                 { 
-                    text: "long-lasting",
+                    text: "development",
                     value: "E"
                 },
                 { 
-                    text: "up to",
+                    text: "in addition",
                     value: "F"
                 },
                 { 
-                    text: "ship",
+                    text: "skill",
                     value: "G"
                 },
                 { 
-                    text: "skull",
+                    text: "go away",
                     value: "H"
                 },
                 { 
-                    text: "good thing",
+                    text: "leave … behind",
                     value: "I"
                 }
             ]

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "at present",
+                    text: "information",
                     answer: "G"
                 },
                 { 
-                    text: "warning",
-                    answer: "E"
-                },
-                { 
-                    text: "handy",
-                    answer: "B"
-                },
-                { 
-                    text: "online",
-                    answer: "C"
-                },
-                { 
-                    text: "pollutant",
+                    text: "detract from",
                     answer: "I"
+                },
+                { 
+                    text: "entrance",
+                    answer: "D"
+                },
+                { 
+                    text: "purpose",
+                    answer: "F"
+                },
+                { 
+                    text: "every day",
+                    answer: "E"
                 }
             ],
             options: [
     
                 { 
-                    text: "imagine",
+                    text: "people,inhabitants",
                     value: "A"
                 },
                 { 
-                    text: "convenient",
+                    text: "leave out",
                     value: "B"
                 },
                 { 
-                    text: "website",
+                    text: "spoil",
                     value: "C"
                 },
                 { 
-                    text: "lifestyle",
+                    text: "main gate",
                     value: "D"
                 },
                 { 
-                    text: "alert",
+                    text: "daily",
                     value: "E"
                 },
                 { 
-                    text: "leave … behind",
+                    text: "target",
                     value: "F"
                 },
                 { 
-                    text: "nowadays",
+                    text: "details",
                     value: "G"
                 },
                 { 
-                    text: "change",
+                    text: "not quiet",
                     value: "H"
                 },
                 { 
-                    text: "contaminant",
+                    text: "negative effect",
                     value: "I"
                 }
             ]

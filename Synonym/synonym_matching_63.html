@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "request",
-                    answer: "D"
-                },
-                { 
-                    text: "boring",
-                    answer: "I"
-                },
-                { 
-                    text: "transparent",
-                    answer: "F"
-                },
-                { 
-                    text: "opportunity",
+                    text: "trend",
                     answer: "A"
                 },
                 { 
-                    text: "annual",
-                    answer: "C"
+                    text: "newest",
+                    answer: "I"
+                },
+                { 
+                    text: "disadvantage",
+                    answer: "G"
+                },
+                { 
+                    text: "improve",
+                    answer: "H"
+                },
+                { 
+                    text: "refurbish",
+                    answer: "F"
                 }
             ],
             options: [
     
                 { 
-                    text: "odds",
+                    text: "likely",
                     value: "A"
                 },
                 { 
-                    text: "gym",
+                    text: "assistance",
                     value: "B"
                 },
                 { 
-                    text: "every year",
+                    text: "at least",
                     value: "C"
                 },
                 { 
-                    text: "ask for",
+                    text: "purpose",
                     value: "D"
                 },
                 { 
-                    text: "increase spaces",
+                    text: "help",
                     value: "E"
                 },
                 { 
-                    text: "straightforward",
+                    text: "renovate",
                     value: "F"
                 },
                 { 
-                    text: "underestimate",
+                    text: "down side",
                     value: "G"
                 },
                 { 
-                    text: "the public",
+                    text: "develop",
                     value: "H"
                 },
                 { 
-                    text: "not interesting",
+                    text: "latest",
                     value: "I"
                 }
             ]

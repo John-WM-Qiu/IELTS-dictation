@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "entrance",
-                    answer: "E"
-                },
-                { 
-                    text: "animal",
+                    text: "important",
                     answer: "H"
                 },
                 { 
-                    text: "online",
+                    text: "organize",
+                    answer: "I"
+                },
+                { 
+                    text: "tactics",
+                    answer: "C"
+                },
+                { 
+                    text: "update",
+                    answer: "B"
+                },
+                { 
+                    text: "classify",
                     answer: "G"
-                },
-                { 
-                    text: "allergic",
-                    answer: "D"
-                },
-                { 
-                    text: "library resources",
-                    answer: "F"
                 }
             ],
             options: [
     
                 { 
-                    text: "unique",
+                    text: "aircraft",
                     value: "A"
                 },
                 { 
-                    text: "10% off",
+                    text: "modem",
                     value: "B"
                 },
                 { 
-                    text: "demanding",
+                    text: "strategy",
                     value: "C"
                 },
                 { 
-                    text: "allergy",
+                    text: "curve",
                     value: "D"
                 },
                 { 
-                    text: "main gate",
+                    text: "link",
                     value: "E"
                 },
                 { 
-                    text: "textbooks",
+                    text: "leave … behind",
                     value: "F"
                 },
                 { 
-                    text: "website",
+                    text: "kind",
                     value: "G"
                 },
                 { 
-                    text: "creature",
+                    text: "primary",
                     value: "H"
                 },
                 { 
-                    text: "boredom",
+                    text: "plan",
                     value: "I"
                 }
             ]

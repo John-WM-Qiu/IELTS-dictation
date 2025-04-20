@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "newest",
-                    answer: "I"
+                    text: "ordinary people",
+                    answer: "H"
                 },
                 { 
-                    text: "clear",
-                    answer: "C"
-                },
-                { 
-                    text: "well-known",
-                    answer: "E"
-                },
-                { 
-                    text: "energetic",
+                    text: "emigrate",
                     answer: "G"
                 },
                 { 
-                    text: "travel",
+                    text: "fee",
+                    answer: "E"
+                },
+                { 
+                    text: "limited",
                     answer: "A"
+                },
+                { 
+                    text: "similar",
+                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "trip",
+                    text: "a small number of",
                     value: "A"
                 },
                 { 
-                    text: "spot",
+                    text: "metropolitan",
                     value: "B"
                 },
                 { 
-                    text: "conclusive",
+                    text: "accessible",
                     value: "C"
                 },
                 { 
-                    text: "consume",
+                    text: "compare",
                     value: "D"
                 },
                 { 
-                    text: "famous",
+                    text: "budget",
                     value: "E"
                 },
                 { 
-                    text: "dangerous",
+                    text: "lively",
                     value: "F"
                 },
                 { 
-                    text: "vigorous",
+                    text: "move",
                     value: "G"
                 },
                 { 
-                    text: "recreation",
+                    text: "the public",
                     value: "H"
                 },
                 { 
-                    text: "latest",
+                    text: "surviving (留下的，幸存的)",
                     value: "I"
                 }
             ]

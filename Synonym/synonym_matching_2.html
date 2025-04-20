@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "specialize in ",
-                    answer: "C"
-                },
-                { 
-                    text: "detract from",
+                    text: "misunderstand",
                     answer: "D"
                 },
                 { 
-                    text: "improve",
-                    answer: "B"
+                    text: "food",
+                    answer: "A"
                 },
                 { 
-                    text: "reserve",
-                    answer: "H"
+                    text: "have to",
+                    answer: "C"
                 },
                 { 
-                    text: "remote",
-                    answer: "E"
+                    text: "round",
+                    answer: "F"
+                },
+                { 
+                    text: "function",
+                    answer: "I"
                 }
             ],
             options: [
     
                 { 
-                    text: "inquiry",
+                    text: "feed on",
                     value: "A"
                 },
                 { 
-                    text: "develop",
+                    text: "retail",
                     value: "B"
                 },
                 { 
-                    text: "emphasis",
+                    text: "demand",
                     value: "C"
                 },
                 { 
-                    text: "negative effect",
+                    text: "wrong idea",
                     value: "D"
                 },
                 { 
-                    text: "distant",
+                    text: "tip",
                     value: "E"
                 },
                 { 
-                    text: "different kinds of relationship",
+                    text: "curve",
                     value: "F"
                 },
                 { 
-                    text: "alter",
+                    text: "frequent",
                     value: "G"
                 },
                 { 
-                    text: "book",
+                    text: "cope with",
                     value: "H"
                 },
                 { 
-                    text: "members",
+                    text: "use",
                     value: "I"
                 }
             ]

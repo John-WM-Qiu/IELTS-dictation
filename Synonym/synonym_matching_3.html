@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "lack",
-                    answer: "A"
-                },
-                { 
-                    text: "behind",
-                    answer: "D"
-                },
-                { 
-                    text: "demonstrate",
-                    answer: "B"
-                },
-                { 
-                    text: "available",
+                    text: "access",
                     answer: "I"
                 },
                 { 
-                    text: "temporary",
-                    answer: "F"
+                    text: "accurately",
+                    answer: "G"
+                },
+                { 
+                    text: "rely on",
+                    answer: "B"
+                },
+                { 
+                    text: "library resources",
+                    answer: "E"
+                },
+                { 
+                    text: "travel",
+                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "fewer",
+                    text: "outdated",
                     value: "A"
                 },
                 { 
-                    text: "exhibition",
+                    text: "depend on",
                     value: "B"
                 },
                 { 
-                    text: "repair",
+                    text: "frequent",
                     value: "C"
                 },
                 { 
-                    text: "rear",
+                    text: "passenger",
                     value: "D"
                 },
                 { 
-                    text: "books",
+                    text: "textbooks",
                     value: "E"
                 },
                 { 
-                    text: "a short time",
+                    text: "members",
                     value: "F"
                 },
                 { 
-                    text: "build",
+                    text: "precisely",
                     value: "G"
                 },
                 { 
-                    text: "down side",
+                    text: "emphasis",
                     value: "H"
                 },
                 { 
-                    text: "have",
+                    text: "use",
                     value: "I"
                 }
             ]

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "restrict",
+                    text: "turn",
                     answer: "A"
                 },
                 { 
-                    text: "fast",
-                    answer: "E"
-                },
-                { 
-                    text: "pattern",
-                    answer: "D"
-                },
-                { 
-                    text: "but",
+                    text: "learn",
                     answer: "C"
                 },
                 { 
-                    text: "reserve",
-                    answer: "G"
+                    text: "double",
+                    answer: "I"
+                },
+                { 
+                    text: "boring",
+                    answer: "H"
+                },
+                { 
+                    text: "tactics",
+                    answer: "F"
                 }
             ],
             options: [
     
                 { 
-                    text: "limit",
+                    text: "switch",
                     value: "A"
                 },
                 { 
-                    text: "count on",
+                    text: "corporate",
                     value: "B"
                 },
                 { 
-                    text: "yet",
+                    text: "obtain",
                     value: "C"
                 },
                 { 
-                    text: "trend",
+                    text: "stronger",
                     value: "D"
                 },
                 { 
-                    text: "rapid",
+                    text: "smog",
                     value: "E"
                 },
                 { 
-                    text: "corporation",
+                    text: "method",
                     value: "F"
                 },
                 { 
-                    text: "book",
+                    text: "shelter",
                     value: "G"
                 },
                 { 
-                    text: "gift",
+                    text: "not interesting",
                     value: "H"
                 },
                 { 
-                    text: "alter",
+                    text: "twice",
                     value: "I"
                 }
             ]

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "computer",
-                    answer: "D"
+                    text: "dynamic",
+                    answer: "B"
                 },
                 { 
-                    text: "free gift",
-                    answer: "A"
+                    text: "injury",
+                    answer: "I"
                 },
                 { 
-                    text: "environment",
+                    text: "entrant",
                     answer: "E"
                 },
                 { 
-                    text: "dynamic",
-                    answer: "F"
+                    text: "fast",
+                    answer: "H"
                 },
                 { 
-                    text: "artwork",
-                    answer: "B"
+                    text: "occupation",
+                    answer: "D"
                 }
             ],
             options: [
     
                 { 
-                    text: "thank-you present",
+                    text: "modify",
                     value: "A"
                 },
                 { 
-                    text: "drawing",
+                    text: "different kinds of relationship",
                     value: "B"
                 },
                 { 
-                    text: "cause",
+                    text: "switch",
                     value: "C"
                 },
                 { 
-                    text: "laptop",
+                    text: "job",
                     value: "D"
                 },
                 { 
-                    text: "surrounding",
+                    text: "members",
                     value: "E"
                 },
                 { 
-                    text: "different kinds of relationship",
+                    text: "tree",
                     value: "F"
                 },
                 { 
-                    text: "website",
+                    text: "convenient",
                     value: "G"
                 },
                 { 
-                    text: "coal",
+                    text: "rapid",
                     value: "H"
                 },
                 { 
-                    text: "forest",
+                    text: "damage",
                     value: "I"
                 }
             ]

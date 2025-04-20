@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -71,10 +73,26 @@
             background-color: #0056b3;
         }
         footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* 移动端响应式样式 */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .matching-section {
+                flex-direction: column;
+            }
+            .question-column, .options-column {
+                width: 100%;
+            }
+            .question-item, .option-item {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -106,62 +124,62 @@
             questions: [
     
                 { 
-                    text: "more than",
-                    answer: "D"
+                    text: "entertainment",
+                    answer: "C"
                 },
                 { 
-                    text: "maximum",
-                    answer: "H"
-                },
-                { 
-                    text: "ordinary people",
+                    text: "online",
                     answer: "B"
                 },
                 { 
-                    text: "large",
+                    text: "initial",
+                    answer: "I"
+                },
+                { 
+                    text: "boring",
                     answer: "F"
                 },
                 { 
-                    text: "capacity",
-                    answer: "C"
+                    text: "place",
+                    answer: "H"
                 }
             ],
             options: [
     
                 { 
-                    text: "weak",
+                    text: "use",
                     value: "A"
                 },
                 { 
-                    text: "men and woman",
+                    text: "website",
                     value: "B"
                 },
                 { 
-                    text: "space",
+                    text: "leisure",
                     value: "C"
                 },
                 { 
-                    text: "beyond",
+                    text: "link",
                     value: "D"
                 },
                 { 
-                    text: "priority",
+                    text: "before",
                     value: "E"
                 },
                 { 
-                    text: "huge",
+                    text: "boredom",
                     value: "F"
                 },
                 { 
-                    text: "improve",
+                    text: "shortage",
                     value: "G"
                 },
                 { 
-                    text: "up to",
+                    text: "spot",
                     value: "H"
                 },
                 { 
-                    text: "fitness suite",
+                    text: "premiere",
                     value: "I"
                 }
             ]
