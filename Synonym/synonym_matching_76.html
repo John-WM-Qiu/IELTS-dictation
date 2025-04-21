@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- 添加 viewport 元标签，确保页面在移动设备上正确显示 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synonym Matching of IELTS Listening</title>
     <style>
         body {
@@ -73,26 +71,10 @@
             background-color: #0056b3;
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        /* 移动端响应式样式 */
-        @media screen and (max-width: 600px) {
-            body {
-                margin: 10px;
-            }
-            .matching-section {
-                flex-direction: column;
-            }
-            .question-column, .options-column {
-                width: 100%;
-            }
-            .question-item, .option-item {
-                padding: 15px;
-                font-size: 14px;
-            }
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
         }
     </style>
 </head>
@@ -124,62 +106,62 @@
             questions: [
     
                 { 
-                    text: "detract from",
-                    answer: "I"
-                },
-                { 
-                    text: "disused",
-                    answer: "A"
-                },
-                { 
-                    text: "every month",
-                    answer: "E"
-                },
-                { 
-                    text: "large",
+                    text: "double",
                     answer: "C"
                 },
                 { 
-                    text: "organization",
-                    answer: "G"
+                    text: "poisonous",
+                    answer: "F"
+                },
+                { 
+                    text: "shape like",
+                    answer: "A"
+                },
+                { 
+                    text: "permanent",
+                    answer: "E"
+                },
+                { 
+                    text: "movie",
+                    answer: "H"
                 }
             ],
             options: [
     
                 { 
-                    text: "empty",
+                    text: "look like",
                     value: "A"
                 },
                 { 
-                    text: "weapon",
+                    text: "young and old",
                     value: "B"
                 },
                 { 
-                    text: "huge",
+                    text: "twice",
                     value: "C"
                 },
                 { 
-                    text: "city",
+                    text: "a short time",
                     value: "D"
                 },
                 { 
-                    text: "monthly",
+                    text: "long-lasting",
                     value: "E"
                 },
                 { 
-                    text: "first-hand",
+                    text: "dangerous",
                     value: "F"
                 },
                 { 
-                    text: "company",
+                    text: "help",
                     value: "G"
                 },
                 { 
-                    text: "economy (经济体)",
+                    text: "motion picture",
                     value: "H"
                 },
                 { 
-                    text: "negative effect",
+                    text: "have",
                     value: "I"
                 }
             ]
@@ -188,6 +170,8 @@
     
 
     let draggedItem = null;
+    let touchStartX = 0;
+    let touchStartY = 0;
 
     // Function to render questions dynamically
     function renderQuestions() {
@@ -224,17 +208,27 @@
         document.querySelectorAll('.option-item').forEach(option => {
             option.addEventListener('dragstart', dragStart);
             option.addEventListener('dragend', dragEnd);
+            // 添加触摸事件监听
+            option.addEventListener('touchstart', touchStart);
+            option.addEventListener('touchmove', touchMove);
+            option.addEventListener('touchend', touchEnd);
         });
 
         // Add drop event listeners to questions
         document.querySelectorAll('.question-item').forEach(question => {
             question.addEventListener('dragover', dragOver);
             question.addEventListener('drop', drop);
+            // 添加触摸事件监听
+            question.addEventListener('touchmove', touchMoveOver);
+            question.addEventListener('touchend', touchDrop);
         });
 
         // Allow dropping back to options container
         optionsContainer.addEventListener('dragover', dragOver);
         optionsContainer.addEventListener('drop', dropToOptions);
+        // 添加触摸事件监听
+        optionsContainer.addEventListener('touchmove', touchMoveOver);
+        optionsContainer.addEventListener('touchend', touchDropToOptions);
     }
 
     function dragStart(e) {
@@ -319,6 +313,87 @@
                     optionItem.classList.add("incorrect");
                 }
             }
+        }
+    }
+
+    // 触摸开始事件
+    function touchStart(e) {
+        draggedItem = e.target.closest('.option-item');
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        draggedItem.classList.add('dragging');
+    }
+
+    // 触摸移动事件
+    function touchMove(e) {
+        if (draggedItem) {
+            e.preventDefault();
+        }
+    }
+
+    // 触摸移动到目标区域事件
+    function touchMoveOver(e) {
+        if (draggedItem) {
+            e.preventDefault();
+        }
+    }
+
+    // 触摸结束，在问题区域放下
+    function touchDrop(e) {
+        if (draggedItem) {
+            const target = e.target.closest('.question-item');
+            if (target) {
+                const existingOption = target.querySelector('.option-item');
+                if (existingOption) {
+                    document.getElementById('options-container').appendChild(existingOption);
+                    sortOptions();
+                }
+                target.appendChild(draggedItem);
+                target.classList.add('dropped');
+            }
+            draggedItem.classList.remove('dragging');
+            draggedItem = null;
+        }
+    }
+
+    // 触摸结束，在选项区域放下
+    function touchDropToOptions(e) {
+        if (draggedItem) {
+            const target = e.target.closest('#options-container');
+            if (target) {
+                target.appendChild(draggedItem);
+                sortOptions();
+            }
+            draggedItem.classList.remove('dragging');
+            draggedItem = null;
+        }
+    }
+
+    // 触摸结束事件
+    function touchEnd(e) {
+        if (draggedItem) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            // 简单判断是否有移动，如果移动距离过小则不处理
+            if (Math.abs(touchEndX - touchStartX) < 5 && Math.abs(touchEndY - touchStartY) < 5) {
+                draggedItem.classList.remove('dragging');
+                draggedItem = null;
+                return;
+            }
+            // 尝试找到最近的可放置区域
+            const elements = document.elementsFromPoint(touchEndX, touchEndY);
+            for (let i = 0; i < elements.length; i++) {
+                const element = elements[i];
+                if (element.classList.contains('question-item')) {
+                    touchDrop({ target: element });
+                    break;
+                } else if (element.id === 'options-container') {
+                    touchDropToOptions({ target: element });
+                    break;
+                }
+            }
+            draggedItem.classList.remove('dragging');
+            draggedItem = null;
         }
     }
 
