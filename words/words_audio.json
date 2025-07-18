@@ -1,0 +1,32 @@
+[
+  {
+    "word": "abundant",
+    "options": ["丰富的", "稀有的", "危险的", "永久的"],
+    "answer": 0,
+    "audio": "https://assets.example.com/audios/abundant.mp3"
+  },
+  {
+    "word": "diligent",
+    "options": ["懒惰的", "聪明的", "勤奋的", "犹豫的"],
+    "answer": 2,
+    "audio": "https://assets.example.com/audios/diligent.mp3"
+  },
+  {
+    "word": "ephemeral",
+    "options": ["永恒的", "短暂的", "复杂的", "明亮的"],
+    "answer": 1,
+    "audio": "https://assets.example.com/audios/ephemeral.mp3"
+  },
+  {
+    "word": "meticulous",
+    "options": ["粗心的", "冲动的", "精确的", "模糊的"],
+    "answer": 2,
+    "audio": "https://assets.example.com/audios/meticulous.mp3"
+  },
+  {
+    "word": "pragmatic",
+    "options": ["理想的", "实用的", "哲学的", "艺术的"],
+    "answer": 1,
+    "audio": "https://assets.example.com/audios/pragmatic.mp3"
+  }
+]
