@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英语单词听力检测</title>
+  <style>
+    /* 样式保持不变 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f7fa;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    header {
+      background: #4e73df;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    
+    .progress-container {
+      padding: 15px 20px;
+      background: #eef2f7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+    }
+    
+    .progress-bar {
+      flex: 1;
+      height: 10px;
+      background: #dee2e6;
+      border-radius: 5px;
+      margin: 0 15px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: #4e73df;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    .quiz-area {
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .audio-controls {
+      margin: 25px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .audio-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #4e73df;
+      color: white;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 24px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .audio-btn:hover {
+      background: #3a56c7;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .audio-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .options-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    
+    @media (max-width: 600px) {
+      .options-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .option-btn {
+      padding: 18px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      background: white;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .option-btn:hover {
+      border-color: #4e73df;
+      background: #f0f4ff;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(78, 115, 223, 0.15);
+    }
+    
+    .timer-container {
+      margin: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4e73df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .timer-icon {
+      font-size: 28px;
+    }
+    
+    .feedback-message {
+      min-height: 60px;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .correct {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .incorrect {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .result-container {
+      padding: 30px;
+      text-align: center;
+      background: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .result-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #4e73df;
+    }
+    
+    .result-score {
+      font-size: 50px;
+      font-weight: 700;
+      color: #4e73df;
+      margin: 10px 0;
+    }
+    
+    .restart-btn {
+      padding: 15px 30px;
+      background: #4e73df;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .restart-btn:hover {
+      background: #3a56c7;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .restart-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .loading-container {
+      padding: 50px;
+      text-align: center;
+      font-size: 20px;
+      color: #4e73df;
+    }
+    
+    .loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+      margin: 20px auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>英语单词词义检测</h1>
+      <p>听发音选词义，检验你的单词掌握程度</p>
+    </header>
+    
+    <div id="loading-section" class="loading-container">
+      <div class="loading-spinner"></div>
+      <p>正在加载单词库，请稍候...</p>
+    </div>
+    
+    <div id="progress-section" class="progress-container hidden">
+      <span id="current-progress">题目 1/5</span>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <span id="score-display">得分: 0</span>
+    </div>
+    
+    <div id="quiz-section" class="hidden">
+      <div class="quiz-area">
+        <h2>请听单词发音，选择正确的中文释义</h2>
+        
+        <div class="audio-controls">
+          <button id="play-btn" class="audio-btn">▶</button>
+          <button id="replay-btn" class="audio-btn">↻</button>
+        </div>
+        
+        <audio id="word-audio"></audio>
+        
+        <div class="timer-container">
+          <span class="timer-icon">⏱️</span>
+          <span id="timer">10</span> 秒
+        </div>
+        
+        <div id="feedback-message" class="feedback-message"></div>
+        
+        <div id="options-container" class="options-container">
+          <!-- 选项通过JavaScript动态生成 -->
+        </div>
+      </div>
+    </div>
+    
+    <div id="result-section" class="result-container hidden">
+      <h2 class="result-title">测试完成！</h2>
+      <p>你的最终得分是：</p>
+      <div class="result-score"><span id="final-score">0</span>/<span id="total-questions">5</span></div>
+      <p id="performance-comment">继续努力！</p>
+      <button id="restart-btn" class="restart-btn">重新测试</button>
+    </div>
+  </div>
+
+  <script>
+    // 全局变量 - 单词库将从外部JSON加载
+    let wordBank = [];
+    
+    // DOM元素引用
+    const loadingSection = document.getElementById('loading-section');
+    const progressSection = document.getElementById('progress-section');
+    const quizSection = document.getElementById('quiz-section');
+    const resultSection = document.getElementById('result-section');
+    const progressFill = document.getElementById('progress-fill');
+    const currentProgress = document.getElementById('current-progress');
+    const scoreDisplay = document.getElementById('score-display');
+    const timerDisplay = document.getElementById('timer');
+    const optionsContainer = document.getElementById('options-container');
+    const wordAudio = document.getElementById('word-audio');
+    const playBtn = document.getElementById('play-btn');
+    const replayBtn = document.getElementById('replay-btn');
+    const feedbackMessage = document.getElementById('feedback-message');
+    const finalScoreDisplay = document.getElementById('final-score');
+    const totalQuestionsDisplay = document.getElementById('total-questions');
+    const performanceComment = document.getElementById('performance-comment');
+    const restartBtn = document.getElementById('restart-btn');
+
+    // 检查 restartBtn 是否正确获取
+    console.log('restartBtn:', restartBtn);
+
+    // 状态变量
+    let currentQuestion = 0;
+    let score = 0;
+    let timer;
+    let timeLeft = 10;
+    let answered = false;
+    // 新增：用于记录错题信息
+    let wrongQuestions = []; 
+    
+    // 初始化
+    function initQuiz() {
+      console.log('开始初始化测试');
+      // 确保定时器被清除
+      clearInterval(timer);
+      // 重置音频状态
+      wordAudio.pause();
+      wordAudio.currentTime = 0;
+      // 重置状态
+      currentQuestion = 0;
+      score = 0;
+      timeLeft = 10;
+      answered = false;
+      // 新增：重置错题记录
+      wrongQuestions = []; 
+      
+      // 清除动态添加的错题信息
+      const wrongWordsList = resultSection.querySelector('ul');
+      if (wrongWordsList) {
+        wrongWordsList.remove();
+      }
+      
+      // 更新UI
+      loadingSection.classList.add('hidden');
+      progressSection.classList.remove('hidden');
+      resultSection.classList.add('hidden');
+      quizSection.classList.remove('hidden');
+      feedbackMessage.textContent = '';
+      feedbackMessage.className = 'feedback-message';
+      
+      // 显示第一个问题
+      if (wordBank.length > 0) {
+        console.log('开始显示第一个问题');
+        showQuestion();
+      } else {
+        console.error('单词库为空，无法开始测试');
+      }
+    }
+
+    // 显示当前问题
+    function showQuestion() {
+      console.log('进入 showQuestion 函数');
+      const question = wordBank[currentQuestion];
+      console.log('当前问题:', question);
+      
+      // 更新进度
+      progressFill.style.width = `${((currentQuestion) / wordBank.length) * 100}%`;
+      currentProgress.textContent = `题目 ${currentQuestion + 1}/${wordBank.length}`;
+      scoreDisplay.textContent = `得分: ${score}`;
+      
+      // 设置音频
+      wordAudio.src = question.audio;
+      wordAudio.load();
+      // 添加音频加载错误处理
+      wordAudio.onerror = () => {
+        console.error('音频加载失败:', wordAudio.src);
+        feedbackMessage.textContent = "⚠️ 音频加载失败，请点击重播按钮";
+        feedbackMessage.className = 'feedback-message incorrect';
+      };
+      
+      // 清除选项和反馈
+      optionsContainer.innerHTML = '';
+      feedbackMessage.textContent = '';
+      feedbackMessage.className = 'feedback-message';
+      
+      // 创建选项按钮
+      question.options.forEach((option, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.textContent = option;
+        // 使用 addEventListener 绑定事件
+        btn.addEventListener('click', () => {
+          if (!answered) {
+            checkAnswer(index);
+          }
+        });
+        optionsContainer.appendChild(btn);
+      });
+      
+      // 启动倒计时
+      startTimer();
+      
+      // 播放音频
+      playAudio();
+    }
+
+    // 播放音频
+    function playAudio() {
+      // 有用户交互后播放音频
+      if (wordAudio.readyState > 0) {
+        wordAudio.play().catch(e => {
+          console.error("音频播放失败:", e);
+          feedbackMessage.textContent = "⚠️ 音频播放失败，请点击重播按钮";
+          feedbackMessage.className = 'feedback-message incorrect';
+        });
+      }
+    }
+
+    // 开始倒计时
+    function startTimer() {
+      clearInterval(timer);
+      timeLeft = 10;
+      timerDisplay.textContent = timeLeft;
+      answered = false;
+      
+      timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+        
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          timeOut();
+        }
+      }, 1000);
+    }
+
+    // 检查答案
+    function checkAnswer(selectedIndex) {
+      if (answered) return;
+      answered = true;
+      clearInterval(timer);
+      
+      const correctIndex = wordBank[currentQuestion].answer;
+      
+      // 显示反馈
+      let feedbackText;
+      if (selectedIndex === correctIndex) {
+        feedbackText = "✓ 回答正确！";
+        feedbackMessage.className = 'feedback-message correct';
+        score++;
+        scoreDisplay.textContent = `得分: ${score}`;
+      } else {
+        feedbackText = `✗ 回答错误！正确答案是：${wordBank[currentQuestion].options[correctIndex]}`;
+        feedbackMessage.className = 'feedback-message incorrect';
+        // 新增：记录错题信息
+        wrongQuestions.push({
+          word: wordBank[currentQuestion].word,
+          correctAnswer: wordBank[currentQuestion].options[correctIndex]
+        });
+      }
+      feedbackMessage.textContent = feedbackText;
+      
+      // 1.5秒后进入下一题
+      setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < wordBank.length) {
+          showQuestion();
+        } else {
+          showResults();
+        }
+      }, 1500);
+    }
+
+    // 超时处理
+    function timeOut() {
+      if (answered) return;
+      answered = true;
+      feedbackMessage.textContent = "⏱️ 时间到！";
+      feedbackMessage.className = 'feedback-message incorrect';
+      // 新增：记录超时未答的错题信息
+      wrongQuestions.push({
+        word: wordBank[currentQuestion].word,
+        correctAnswer: wordBank[currentQuestion].options[wordBank[currentQuestion].answer]
+      });
+      
+      // 1.5秒后进入下一题
+      setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < wordBank.length) {
+          showQuestion();
+        } else {
+          showResults();
+        }
+      }, 1500);
+    }
+
+    // 显示结果
+    function showResults() {
+      quizSection.classList.add('hidden');
+      progressSection.classList.add('hidden');
+      resultSection.classList.remove('hidden');
+      
+      finalScoreDisplay.textContent = score;
+      totalQuestionsDisplay.textContent = wordBank.length;
+      progressFill.style.width = '100%';
+      
+      // 根据分数给出评价
+      const percentage = (score / wordBank.length) * 100;
+      if (percentage >= 90) {
+        performanceComment.textContent = "太棒了！你对这些单词的掌握非常出色！";
+      } else if (percentage >= 70) {
+        performanceComment.textContent = "很好！继续努力提升你的词汇量！";
+      } else if (percentage >= 50) {
+        performanceComment.textContent = "不错！再多练习一下就更好了！";
+      } else {
+        performanceComment.textContent = "继续努力！这些单词需要更多的练习！";
+      }
+
+      // 新增：显示错题信息
+      if (wrongQuestions.length > 0) {
+        const wrongWordsContainer = document.createElement('div');
+        wrongWordsContainer.innerHTML = '<h3>请复制下方错词到单词本哦：</h3><ul style="list-style-type: none; padding: 0; margin: 20px 0 40px 0;"></ul>';
+        const wrongWordsList = wrongWordsContainer.querySelector('ul');
+        wrongQuestions.forEach(wrongQuestion => {
+          const li = document.createElement('li');
+          li.textContent = `${wrongQuestion.word} - ${wrongQuestion.correctAnswer}`;
+          wrongWordsList.appendChild(li);
+        });
+        resultSection.append(wrongWordsContainer);
+      }
+    }
+
+    // 从外部JSON加载单词库
+    async function loadWordBank() {
+      try {
+        const response = await fetch('https://john-wm-qiu.github.io/IELTS-dictation/words/B1B2/B1B2_19.json');
+        if (!response.ok) {
+          throw new Error(`单词库加载失败: HTTP ${response.status}`);
+        }
+        return await response.json();
+      } catch (error) {
+        console.error("加载单词库出错:", error);
+        // 在界面上显示错误信息
+        loadingSection.innerHTML = `
+          <div class="feedback-message incorrect" style="margin: 50px; padding: 30px; text-align: center;">
+            <h2>⚠️ 单词库加载失败</h2>
+            <p>${error.message}</p>
+            <p>请检查网络连接后刷新页面重试</p>
+            <button onclick="location.reload()" style="padding: 10px 20px; margin-top: 20px; background: #4e73df; color: white; border: none; border-radius: 5px; cursor: pointer;">刷新页面</button>
+          </div>
+        `;
+        throw error; // 重新抛出错误以便上层处理
+      }
+    }
+
+    // 事件监听器
+    playBtn.addEventListener('click', () => {
+      playAudio();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      wordAudio.currentTime = 0;
+      playAudio();
+    });
+
+    restartBtn.addEventListener('click', () => {
+      console.log('点击重新测试按钮');
+      initQuiz();
+    });
+
+    // 初始化应用
+    async function initApp() {
+      try {
+        // 加载单词库
+        wordBank = await loadWordBank();
+        console.log("成功加载单词库:", wordBank.length, "个单词");
+        
+        // 初始化测试
+        initQuiz();
+      } catch (error) {
+        // 错误处理已在loadWordBank中处理
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
