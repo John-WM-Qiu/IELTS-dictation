@@ -1,0 +1,442 @@
+[
+  {
+    "word": "proved",
+    "options": [
+      "风景；山水画",
+      "已证明的",
+      "分配的任务或工作",
+      "认为；计算"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/proved.wav"
+  },
+  {
+    "word": "tone",
+    "options": [
+      "已写下的；书面的",
+      "细节；详细情况",
+      "反映；反射",
+      "语气；色调"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/tone.wav"
+  },
+  {
+    "word": "cheap",
+    "options": [
+      "精确的；准确的",
+      "便宜的",
+      "混乱；脏乱",
+      "麻烦；问题"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/cheap.wav"
+  },
+  {
+    "word": "roughly",
+    "options": [
+      "规则；统治",
+      "仍然；更",
+      "大约；粗略地",
+      "相当大的；重要的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/roughly.wav"
+  },
+  {
+    "word": "fenced",
+    "options": [
+      "粉末；粉状物",
+      "建筑师",
+      "几乎不；刚刚",
+      "已围栏的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/fenced.wav"
+  },
+  {
+    "word": "deal",
+    "options": [
+      "减少；降低",
+      "交易；处理",
+      "笔记；注意",
+      "消耗；消费"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/deal.wav"
+  },
+  {
+    "word": "influence",
+    "options": [
+      "受苦；患病",
+      "有效率的；能干的",
+      "影响；势力",
+      "趋向；照顾"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/influence.wav"
+  },
+  {
+    "word": "rural",
+    "options": [
+      "视觉；视力",
+      "农村的；乡下的",
+      "赞助商；赞助",
+      "树干；行李箱"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/rural.wav"
+  },
+  {
+    "word": "daily",
+    "options": [
+      "已增强的",
+      "必然地；必需地",
+      "谁（宾格）",
+      "每日的；日报"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/daily.wav"
+  },
+  {
+    "word": "daytime",
+    "options": [
+      "年少的；资历较浅的",
+      "区域；地带",
+      "阴影；遮阳",
+      "白天；日间"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/daytime.wav"
+  },
+  {
+    "word": "guided",
+    "options": [
+      "手掌；棕榈树",
+      "放置；铺设",
+      "已指导的；有引导的",
+      "分配的任务或工作"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/g/guided.wav"
+  },
+  {
+    "word": "strength",
+    "options": [
+      "温柔的；温和的",
+      "已维持的",
+      "力量；长处",
+      "通讯；交流"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/strength.wav"
+  },
+  {
+    "word": "unnecessary",
+    "options": [
+      "委员会；佣金",
+      "兽医；审查",
+      "不必要的；多余的",
+      "安全；保护"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/u/unnecessary.wav"
+  },
+  {
+    "word": "property",
+    "options": [
+      "先进的",
+      "财产；属性",
+      "出现；浮现",
+      "比较（compare的过去式和过去分词）"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/property.wav"
+  },
+  {
+    "word": "formation",
+    "options": [
+      "形成；编队",
+      "笨拙的",
+      "合理地；适度地",
+      "通常地；普遍地"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/formation.wav"
+  },
+  {
+    "word": "realise",
+    "options": [
+      "已存在的",
+      "已受影响的",
+      "赛跑；种族",
+      "实现；意识到"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/realise.wav"
+  },
+  {
+    "word": "rehearsal",
+    "options": [
+      "排练；彩排",
+      "已实现的",
+      "已增强的",
+      "明智的；合乎情理的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/rehearsal.wav"
+  },
+  {
+    "word": "mount",
+    "options": [
+      "忽视；不理睬",
+      "转换；改变信仰的人",
+      "惊奇的",
+      "山峰；安装"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/mount.wav"
+  },
+  {
+    "word": "sense",
+    "options": [
+      "保护；防护",
+      "感觉；意义",
+      "脸；面对",
+      "缓慢的；减速"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/sense.wav"
+  },
+  {
+    "word": "share",
+    "options": [
+      "雕像；塑像",
+      "分享；份额",
+      "尽管；不管",
+      "程度；范围"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/share.wav"
+  },
+  {
+    "word": "expected",
+    "options": [
+      "管弦乐队的；管弦乐的",
+      "在国外",
+      "预期的；期待的",
+      "提升；促进"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/expected.wav"
+  },
+  {
+    "word": "spot",
+    "options": [
+      "已退休的；退伍的",
+      "风；缠绕（读作 /waɪnd/ 动词时）",
+      "动作；提议",
+      "斑点；地点"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/spot.wav"
+  },
+  {
+    "word": "castle",
+    "options": [
+      "平衡；余额",
+      "借口；原谅",
+      "城堡",
+      "风；缠绕（读作 /waɪnd/ 动词时）"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/castle.wav"
+  },
+  {
+    "word": "explore",
+    "options": [
+      "已假定的；已承担的",
+      "注意到的；观察到的",
+      "探索；探究",
+      "已毁坏的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/explore.wav"
+  },
+  {
+    "word": "of",
+    "options": [
+      "已照顾的；已注意的",
+      "...的；由...制成的",
+      "全部的；完整的",
+      "专门研究；专攻"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/o/of.wav"
+  },
+  {
+    "word": "obviously",
+    "options": [
+      "已升级的；改进的",
+      "已挑选的",
+      "化学家；药剂师",
+      "明显地；显然"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/o/obviously.wav"
+  },
+  {
+    "word": "majority",
+    "options": [
+      "大部分；多数",
+      "已识别的；已确认的",
+      "工具包；成套工具",
+      "摘要；总结"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/majority.wav"
+  },
+  {
+    "word": "characteristic",
+    "options": [
+      "随便的；临时的",
+      "广告",
+      "特性；特征",
+      "锡；罐头"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/characteristic.wav"
+  },
+  {
+    "word": "cave",
+    "options": [
+      "抑郁；经济萧条",
+      "实际的",
+      "百分比；百分率",
+      "山洞；穴"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/cave.wav"
+  },
+  {
+    "word": "accommodation",
+    "options": [
+      "重要地",
+      "备用的；节省",
+      "精神；灵魂",
+      "住宿"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/accommodation.wav"
+  },
+  {
+    "word": "consistent",
+    "options": [
+      "可能；也许",
+      "粉末；粉状物",
+      "一致的；连贯的",
+      "雨林；热带雨林"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/consistent.wav"
+  },
+  {
+    "word": "close",
+    "options": [
+      "社交；使社会化",
+      "强烈的；紧张的",
+      "压；新闻界",
+      "关闭；靠近的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/close.wav"
+  },
+  {
+    "word": "ideal",
+    "options": [
+      "理想的；完美的",
+      "性别",
+      "出现；显得",
+      "浪费；废物"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/ideal.wav"
+  },
+  {
+    "word": "commercial",
+    "options": [
+      "已建议的",
+      "批判的；关键的",
+      "委员会；佣金",
+      "商业广告；商业的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/commercial.wav"
+  },
+  {
+    "word": "mention",
+    "options": [
+      "提及；说起",
+      "几乎；实际上",
+      "吸引力",
+      "意图；目的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/mention.wav"
+  },
+  {
+    "word": "reaction",
+    "options": [
+      "折扣；打折",
+      "无论何时；随时",
+      "随便的；临时的",
+      "反应；反作用"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/reaction.wav"
+  },
+  {
+    "word": "delay",
+    "options": [
+      "延迟；耽搁",
+      "精神的；智力的",
+      "隐藏的；隐秘的",
+      "依赖；取决于（depend的过去式和过去分词）"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/delay.wav"
+  },
+  {
+    "word": "application",
+    "options": [
+      "深度；深处",
+      "全球的；总体的",
+      "最终的；极限的",
+      "申请；应用"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/application.wav"
+  },
+  {
+    "word": "mess",
+    "options": [
+      "复杂的；狡猾的",
+      "混乱；脏乱",
+      "手；帮助",
+      "活着的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/mess.wav"
+  },
+  {
+    "word": "dairy",
+    "options": [
+      "以某种方式；不知怎么地",
+      "对待；治疗",
+      "奶制品；奶牛场",
+      "问卷；调查表"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/dairy.wav"
+  }
+]

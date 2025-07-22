@@ -1,0 +1,442 @@
+[
+  {
+    "word": "direct",
+    "options": [
+      "细节；详细情况",
+      "已减少的；降低的",
+      "历史的；历史上的",
+      "直接的；指挥"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/direct.wav"
+  },
+  {
+    "word": "organic",
+    "options": [
+      "洗碗机",
+      "几乎；实际上",
+      "有机的；生物体的",
+      "实际的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/o/organic.wav"
+  },
+  {
+    "word": "audience",
+    "options": [
+      "奖励；回报",
+      "有缺陷的；故障的",
+      "观众；听众",
+      "抢劫；盗取"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/audience.wav"
+  },
+  {
+    "word": "encourage",
+    "options": [
+      "问（ask的过去式和过去分词）",
+      "强烈地；坚固地",
+      "鼓励；支持",
+      "截止日期；最后期限"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/encourage.wav"
+  },
+  {
+    "word": "proposal",
+    "options": [
+      "提议；建议",
+      "永久的；持久的",
+      "直接地；马上",
+      "笨拙的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/proposal.wav"
+  },
+  {
+    "word": "ancient",
+    "options": [
+      "极端的；极限的",
+      "初级的；主要的",
+      "合同；缩小",
+      "古老的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/ancient.wav"
+  },
+  {
+    "word": "contained",
+    "options": [
+      "抑郁；经济萧条",
+      "舌头；语言",
+      "被包含的",
+      "运气；财富"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/contained.wav"
+  },
+  {
+    "word": "bet",
+    "options": [
+      "向前；前进",
+      "不久；简短地",
+      "风景；景色",
+      "打赌；赌注"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/b/bet.wav"
+  },
+  {
+    "word": "perspective",
+    "options": [
+      "简历（Curriculum Vitae）",
+      "密切地",
+      "视角；远景",
+      "连接的；有关联的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/perspective.wav"
+  },
+  {
+    "word": "paced",
+    "options": [
+      "已有步调的；已控制速度的",
+      "不满意的",
+      "视野；观点",
+      "智力；情报"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/paced.wav"
+  },
+  {
+    "word": "published",
+    "options": [
+      "劳动；劳工",
+      "已出版的",
+      "舞台；阶段",
+      "消费；消耗量"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/published.wav"
+  },
+  {
+    "word": "market",
+    "options": [
+      "市场；集市",
+      "已志愿的；已主动提供的",
+      "修理；固定",
+      "广泛的；大量的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/market.wav"
+  },
+  {
+    "word": "joy",
+    "options": [
+      "快乐；喜悦",
+      "图表；图解",
+      "合法的；法律的",
+      "害怕；恐惧"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/j/joy.wav"
+  },
+  {
+    "word": "adopted",
+    "options": [
+      "感到吸引的",
+      "比例；部分",
+      "建筑师",
+      "被采纳的；被收养的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/adopted.wav"
+  },
+  {
+    "word": "race",
+    "options": [
+      "赛跑；种族",
+      "小屋；村舍",
+      "娱乐；消遣",
+      "最初；本来"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/race.wav"
+  },
+  {
+    "word": "economy",
+    "options": [
+      "逃脱；逃避",
+      "切割；剪裁",
+      "经济；节约",
+      "麻烦；问题"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/economy.wav"
+  },
+  {
+    "word": "spite",
+    "options": [
+      "造型；制作",
+      "呼吸",
+      "恶意；不顾",
+      "最精彩的部分；突出显示"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/spite.wav"
+  },
+  {
+    "word": "achieved",
+    "options": [
+      "西方的；西部的",
+      "已实现的",
+      "地下室",
+      "泥土；泥浆"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/achieved.wav"
+  },
+  {
+    "word": "defend",
+    "options": [
+      "创新的；革新的",
+      "几乎；实际上",
+      "防御；辩护",
+      "完全地；彻底地"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/defend.wav"
+  },
+  {
+    "word": "slope",
+    "options": [
+      "奶制品；奶牛场",
+      "斜坡；倾斜",
+      "精神上；智力上",
+      "比例；部分"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/slope.wav"
+  },
+  {
+    "word": "short",
+    "options": [
+      "上色的；有色人种的",
+      "意识到的",
+      "询问；查询",
+      "短的；不足的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/short.wav"
+  },
+  {
+    "word": "hostel",
+    "options": [
+      "直到；耕种",
+      "滑动；幻灯片",
+      "青年旅社",
+      "已释放的；已发行的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/h/hostel.wav"
+  },
+  {
+    "word": "stuff",
+    "options": [
+      "已挑选的；已采摘的",
+      "范围；山脉",
+      "物质；填塞",
+      "依赖；取决于（depend的过去式和过去分词）"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/stuff.wav"
+  },
+  {
+    "word": "concentrate",
+    "options": [
+      "完全地；充分地",
+      "贡献；捐助",
+      "调查；研究",
+      "集中；浓缩"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/concentrate.wav"
+  },
+  {
+    "word": "gain",
+    "options": [
+      "管弦乐队的；管弦乐的",
+      "获得；增加",
+      "正确的；适当的",
+      "混乱；脏乱"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/g/gain.wav"
+  },
+  {
+    "word": "detail",
+    "options": [
+      "注意到的；观察到的",
+      "海岸；支撑",
+      "向前；前进",
+      "细节；详细情况"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/detail.wav"
+  },
+  {
+    "word": "certificate",
+    "options": [
+      "已扩展的",
+      "观察；观测",
+      "观察；遵守",
+      "证书"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/certificate.wav"
+  },
+  {
+    "word": "measure",
+    "options": [
+      "影响",
+      "位置；职位",
+      "测量；措施",
+      "正常的；正规的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/measure.wav"
+  },
+  {
+    "word": "vast",
+    "options": [
+      "已照顾的；已注意的",
+      "因此；所以",
+      "震惊；冲击",
+      "广阔的；巨大的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/v/vast.wav"
+  },
+  {
+    "word": "hut",
+    "options": [
+      "小屋；棚屋",
+      "趋势；趋向",
+      "平稳地；顺利地",
+      "在...之后；超出"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/h/hut.wav"
+  },
+  {
+    "word": "effort",
+    "options": [
+      "已恢复的；已修复的",
+      "通道；接近的机会",
+      "努力；尝试",
+      "安全；保护"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/effort.wav"
+  },
+  {
+    "word": "steam",
+    "options": [
+      "说明；图解",
+      "信心；信任",
+      "已识别的；公认",
+      "蒸汽；水蒸气"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/steam.wav"
+  },
+  {
+    "word": "dolphin",
+    "options": [
+      "尽管",
+      "建筑师",
+      "织物；结构",
+      "海豚"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/dolphin.wav"
+  },
+  {
+    "word": "deadline",
+    "options": [
+      "温室",
+      "截止日期；最后期限",
+      "也不；也不是",
+      "铁；熨斗"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/deadline.wav"
+  },
+  {
+    "word": "shaped",
+    "options": [
+      "重要性",
+      "可用性",
+      "成形的；具有形状的",
+      "非常地；可怕地"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/shaped.wav"
+  },
+  {
+    "word": "brief",
+    "options": [
+      "简短的；概要",
+      "依靠的；受...决定的",
+      "递送；发表",
+      "非常地；可怕地"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/b/brief.wav"
+  },
+  {
+    "word": "neither",
+    "options": [
+      "两者都不；也不",
+      "稍微；少许",
+      "已评判的；认为",
+      "重要性"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/n/neither.wav"
+  },
+  {
+    "word": "participant",
+    "options": [
+      "很；非常",
+      "帐篷；罩子",
+      "成长；增长",
+      "参与者；参加者"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/participant.wav"
+  },
+  {
+    "word": "commitment",
+    "options": [
+      "关闭；靠近的",
+      "确信的；坚信的",
+      "承诺；承诺的事",
+      "结果；效果"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/commitment.wav"
+  },
+  {
+    "word": "unable",
+    "options": [
+      "不能的；不会的",
+      "已声称的",
+      "反映；反射",
+      "以某种方式；不知怎么地"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/u/unable.wav"
+  }
+]

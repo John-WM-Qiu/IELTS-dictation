@@ -1,0 +1,442 @@
+[
+  {
+    "word": "chain",
+    "options": [
+      "最低限度；最小量",
+      "链条；连锁",
+      "称为（call的过去式和过去分词）",
+      "成长；增长"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/chain.wav"
+  },
+  {
+    "word": "primary",
+    "options": [
+      "不能的；不会的",
+      "样品；样本",
+      "初级的；主要的",
+      "适当的；合适的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/primary.wav"
+  },
+  {
+    "word": "will",
+    "options": [
+      "已采访的；已面试的",
+      "将；意愿",
+      "暴力；侵犯",
+      "比例；部分"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/w/will.wav"
+  },
+  {
+    "word": "feature",
+    "options": [
+      "特征；专题节目",
+      "安全的；保护",
+      "走廊；通道",
+      "已取消的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/feature.wav"
+  },
+  {
+    "word": "proper",
+    "options": [
+      "正确的；适当的",
+      "无论哪里；各处",
+      "满意的；满足的",
+      "注意到的；观察到的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/proper.wav"
+  },
+  {
+    "word": "complicated",
+    "options": [
+      "复杂的；难解的",
+      "食堂；小卖部",
+      "影响；势力",
+      "临时保姆"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/complicated.wav"
+  },
+  {
+    "word": "delighted",
+    "options": [
+      "浪漫的；爱情的",
+      "高兴的；喜欢的",
+      "强烈的；紧张的",
+      "引起（cause的过去式和过去分词）"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/delighted.wav"
+  },
+  {
+    "word": "introduced",
+    "options": [
+      "已介绍的；引进的",
+      "新闻业；新闻工作",
+      "已视为；已尊敬的",
+      "证明；证实"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/introduced.wav"
+  },
+  {
+    "word": "storey",
+    "options": [
+      "楼层；层",
+      "几乎；实际上",
+      "已分析的",
+      "乐观的；乐观主义的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/storey.wav"
+  },
+  {
+    "word": "excuse",
+    "options": [
+      "无论什么；不管怎样",
+      "借口；原谅",
+      "确信的；坚信的",
+      "已打包的；挤满了的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/excuse.wav"
+  },
+  {
+    "word": "miner",
+    "options": [
+      "矿工；采矿工程师",
+      "短的；不足的",
+      "负担得起",
+      "给人深刻印象的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/miner.wav"
+  },
+  {
+    "word": "translation",
+    "options": [
+      "图表；图解",
+      "翻译；转化",
+      "分开的；分离的",
+      "地下室"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/translation.wav"
+  },
+  {
+    "word": "existed",
+    "options": [
+      "已提供的；假如",
+      "询问；查询",
+      "已存在的",
+      "消耗；消费"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/existed.wav"
+  },
+  {
+    "word": "emotional",
+    "options": [
+      "自由的；免费的",
+      "情感的；情绪的",
+      "反应；反作用",
+      "责任；职责"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/emotional.wav"
+  },
+  {
+    "word": "financial",
+    "options": [
+      "微小的；极小的",
+      "执行的；主管",
+      "财务的；金融的",
+      "数据库"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/financial.wav"
+  },
+  {
+    "word": "universal",
+    "options": [
+      "学期；术语",
+      "普遍的；通用的",
+      "季节性的；周期性的",
+      "受影响的；有印象的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/u/universal.wav"
+  },
+  {
+    "word": "monthly",
+    "options": [
+      "笔记；注意",
+      "每月的；月刊",
+      "加；增加的人或物",
+      "钥匙；关键"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/monthly.wav"
+  },
+  {
+    "word": "experience",
+    "options": [
+      "引起（cause的过去式和过去分词）",
+      "经验；经历",
+      "太阳的；太阳能的",
+      "简单地；仅仅"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/experience.wav"
+  },
+  {
+    "word": "arrow",
+    "options": [
+      "点；观点",
+      "依赖；依靠",
+      "最初的；原创的",
+      "箭头；箭"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/arrow.wav"
+  },
+  {
+    "word": "title",
+    "options": [
+      "随便的；临时的",
+      "微小的；极小的",
+      "标题；称号",
+      "行人；徒步旅行者"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/title.wav"
+  },
+  {
+    "word": "interviewed",
+    "options": [
+      "肥胖症；过度肥胖",
+      "详细的；精细的",
+      "能干的；有能力的",
+      "已采访的；已面试的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/interviewed.wav"
+  },
+  {
+    "word": "reflect",
+    "options": [
+      "足够的；充足的",
+      "小屋；棚屋",
+      "反映；反射",
+      "已记入贷方的；已归功于的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/reflect.wav"
+  },
+  {
+    "word": "seriously",
+    "options": [
+      "相当地；非常",
+      "化学品；化学的",
+      "认真地；严肃地",
+      "有效率的；能干的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/seriously.wav"
+  },
+  {
+    "word": "generated",
+    "options": [
+      "主持人；展示者",
+      "已产生的",
+      "小路；路线",
+      "费用；控告；充电"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/g/generated.wav"
+  },
+  {
+    "word": "romantic",
+    "options": [
+      "已实现的；已意识到的",
+      "获得；增加",
+      "浪漫的；爱情的",
+      "生存；幸存"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/romantic.wav"
+  },
+  {
+    "word": "ship",
+    "options": [
+      "化学家；药剂师",
+      "变异；变化",
+      "船舶；运送",
+      "安全的；保护"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/ship.wav"
+  },
+  {
+    "word": "suspect",
+    "options": [
+      "相互作用；互动",
+      "混合的；多样的",
+      "怀疑；嫌疑人",
+      "青年；年轻人"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/suspect.wav"
+  },
+  {
+    "word": "medication",
+    "options": [
+      "简单地；仅仅",
+      "药物治疗；药物",
+      "闲暇；空闲时间",
+      "最低限度；最小量"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/medication.wav"
+  },
+  {
+    "word": "picked",
+    "options": [
+      "已挑选的；已采摘的",
+      "渴望的；热切的",
+      "错误；误解",
+      "调查；研究"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/picked.wav"
+  },
+  {
+    "word": "repeated",
+    "options": [
+      "通讯；交流",
+      "雕塑；雕刻",
+      "重复的；反复的",
+      "惊吓；使害怕"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/repeated.wav"
+  },
+  {
+    "word": "suffer",
+    "options": [
+      "受苦；患病",
+      "正确的；适当的",
+      "元素；要素",
+      "力量；长处"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/suffer.wav"
+  },
+  {
+    "word": "potential",
+    "options": [
+      "潜力；潜能",
+      "平静的；使平静",
+      "娱乐；消遣",
+      "仪式；典礼"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/potential.wav"
+  },
+  {
+    "word": "survey",
+    "options": [
+      "材料；素材",
+      "专门研究；专攻",
+      "铁；熨斗",
+      "调查；测量"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/survey.wav"
+  },
+  {
+    "word": "invest",
+    "options": [
+      "投资；投入",
+      "已减少的；降低的",
+      "比例；部分",
+      "被采纳的；被收养的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/invest.wav"
+  },
+  {
+    "word": "upon",
+    "options": [
+      "生活；居住（live的现在时）",
+      "在...之上；紧接着",
+      "贡献；捐助",
+      "芭蕾舞"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/u/upon.wav"
+  },
+  {
+    "word": "cover",
+    "options": [
+      "温暖的；加热",
+      "赢得；获胜",
+      "覆盖；封面",
+      "野生动物；野生生物"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/cover.wav"
+  },
+  {
+    "word": "latest",
+    "options": [
+      "几乎不；刚刚",
+      "隐喻；比喻",
+      "国家的；全国性的",
+      "最新的；最近的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/l/latest.wav"
+  },
+  {
+    "word": "relatively",
+    "options": [
+      "下降；婉拒",
+      "相当地；相对地",
+      "区域；行政区",
+      "已观察的；已注意到的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/relatively.wav"
+  },
+  {
+    "word": "popularity",
+    "options": [
+      "温暖的；加热",
+      "流行；受欢迎",
+      "可用性",
+      "地方；放置"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/popularity.wav"
+  },
+  {
+    "word": "canteen",
+    "options": [
+      "食堂；小卖部",
+      "董事会；板子",
+      "表演；执行情况",
+      "快乐；喜悦"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/canteen.wav"
+  }
+]

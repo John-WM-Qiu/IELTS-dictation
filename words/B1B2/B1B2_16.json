@@ -1,0 +1,442 @@
+[
+  {
+    "word": "reward",
+    "options": [
+      "喂养；供给",
+      "印象；效果",
+      "奖励；回报",
+      "创始人；打底者"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/reward.wav"
+  },
+  {
+    "word": "discovered",
+    "options": [
+      "现象；非凡的人或事物",
+      "已发现的",
+      "概念；观念",
+      "隐喻；比喻"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/discovered.wav"
+  },
+  {
+    "word": "suffered",
+    "options": [
+      "显然；表面上",
+      "在...之上；紧接着",
+      "已观察的；已注意到的",
+      "已受苦的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/suffered.wav"
+  },
+  {
+    "word": "empire",
+    "options": [
+      "财产；属性",
+      "帝国；王国",
+      "农村的；乡下的",
+      "东方的；东部的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/empire.wav"
+  },
+  {
+    "word": "championship",
+    "options": [
+      "强大的；有力的",
+      "锦标赛；冠军身份",
+      "议会；委员会",
+      "涉及的；卷入的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/championship.wav"
+  },
+  {
+    "word": "date",
+    "options": [
+      "样品；样本",
+      "日期；约会",
+      "已恢复的；已修复的",
+      "已升起的；已提高的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/date.wav"
+  },
+  {
+    "word": "despite",
+    "options": [
+      "震惊；冲击",
+      "尽管；不管",
+      "经验；经历",
+      "日益；越来越多地"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/despite.wav"
+  },
+  {
+    "word": "litter",
+    "options": [
+      "负担得起",
+      "改变",
+      "垃圾；散落物",
+      "文学的；书面的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/l/litter.wav"
+  },
+  {
+    "word": "note",
+    "options": [
+      "制造；使成为",
+      "笔记；注意",
+      "值得纪念的；难忘的",
+      "影响；势力"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/n/note.wav"
+  },
+  {
+    "word": "responsibility",
+    "options": [
+      "趋向；照顾",
+      "充满希望地",
+      "责任；职责",
+      "激励；启发灵感"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/responsibility.wav"
+  },
+  {
+    "word": "venue",
+    "options": [
+      "费用；控告；充电",
+      "怀疑；疑惑",
+      "已实现的",
+      "地点；会场"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/v/venue.wav"
+  },
+  {
+    "word": "generate",
+    "options": [
+      "已覆盖的",
+      "已想知道的；感到惊讶的",
+      "户外的；露天的",
+      "产生；生成"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/g/generate.wav"
+  },
+  {
+    "word": "produce",
+    "options": [
+      "探索；探究",
+      "生产；产生",
+      "受控制的",
+      "最初；本来"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/produce.wav"
+  },
+  {
+    "word": "concerned",
+    "options": [
+      "担忧的；有关的",
+      "确保；保证",
+      "简历（Curriculum Vitae）",
+      "已切换的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/concerned.wav"
+  },
+  {
+    "word": "fashionable",
+    "options": [
+      "流行的；时髦的",
+      "捐赠；赠送",
+      "保护；保存",
+      "设计的；有意的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/fashionable.wav"
+  },
+  {
+    "word": "viewpoint",
+    "options": [
+      "观点；视角",
+      "行人；徒步旅行者",
+      "树干；行李箱",
+      "咨询；查阅"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/v/viewpoint.wav"
+  },
+  {
+    "word": "shelter",
+    "options": [
+      "砍；排骨",
+      "庇护所；保护",
+      "到期的；应得的",
+      "人行道；铺面"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/shelter.wav"
+  },
+  {
+    "word": "resulted",
+    "options": [
+      "已产生的结果",
+      "语气；色调",
+      "能力",
+      "满的；完全的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/resulted.wav"
+  },
+  {
+    "word": "household",
+    "options": [
+      "家庭；家务",
+      "咨询；查阅",
+      "劳动；劳工",
+      "加；增加的人或物"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/h/household.wav"
+  },
+  {
+    "word": "action",
+    "options": [
+      "应该；应当",
+      "吸引力",
+      "行动",
+      "娱乐；消遣"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/action.wav"
+  },
+  {
+    "word": "fare",
+    "options": [
+      "车费；费用",
+      "出现；浮现",
+      "保持；雇请",
+      "抢劫；盗取"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/fare.wav"
+  },
+  {
+    "word": "amount",
+    "options": [
+      "执行的；主管",
+      "发生；出现",
+      "数量",
+      "射击；拍摄"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/amount.wav"
+  },
+  {
+    "word": "managed",
+    "options": [
+      "咨询；查阅",
+      "翻译；转化",
+      "上色的；有色人种的",
+      "已设法做到的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/managed.wav"
+  },
+  {
+    "word": "seat",
+    "options": [
+      "座位；就座",
+      "雨林；热带雨林",
+      "港口；口岸",
+      "建立；设立"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/seat.wav"
+  },
+  {
+    "word": "investigation",
+    "options": [
+      "复杂的；难解的",
+      "探索；探究",
+      "调查；审查",
+      "已生产的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/investigation.wav"
+  },
+  {
+    "word": "clumsy",
+    "options": [
+      "已运输的",
+      "已识别的；公认",
+      "笨拙的",
+      "如此；因此"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/clumsy.wav"
+  },
+  {
+    "word": "identified",
+    "options": [
+      "附近的；邻近的",
+      "已发生的",
+      "已调查的",
+      "已识别的；已确认的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/identified.wav"
+  },
+  {
+    "word": "reckon",
+    "options": [
+      "已评判的；认为",
+      "预算",
+      "一代；产生",
+      "认为；计算"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/reckon.wav"
+  },
+  {
+    "word": "mentally",
+    "options": [
+      "精神上；智力上",
+      "心烦的；打翻",
+      "摆脱；除去",
+      "接触；联系"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/mentally.wav"
+  },
+  {
+    "word": "poverty",
+    "options": [
+      "试验；审讯",
+      "折扣；打折",
+      "已证明的",
+      "贫困；贫穷"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/poverty.wav"
+  },
+  {
+    "word": "aimed",
+    "options": [
+      "引起（cause的过去式和过去分词）",
+      "假定；承担",
+      "瞄准（aim的过去式和过去分词）",
+      "在前；提前"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/aimed.wav"
+  },
+  {
+    "word": "designed",
+    "options": [
+      "季节性的；周期性的",
+      "主人；大师",
+      "消费；消耗量",
+      "设计的；有意的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/designed.wav"
+  },
+  {
+    "word": "type",
+    "options": [
+      "计划；节目（英式英语拼写）",
+      "类型；打字",
+      "经济；节约",
+      "已估计的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/type.wav"
+  },
+  {
+    "word": "chop",
+    "options": [
+      "常规；例行程序",
+      "责任；职责",
+      "探索；探究",
+      "砍；排骨"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/chop.wav"
+  },
+  {
+    "word": "seed",
+    "options": [
+      "转换；改变信仰的人",
+      "先进的",
+      "递送；发表",
+      "种子；播种"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/seed.wav"
+  },
+  {
+    "word": "credit",
+    "options": [
+      "问卷；调查表",
+      "已提取的；已拔出的",
+      "信用；学分",
+      "收入；收益"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/credit.wav"
+  },
+  {
+    "word": "baker",
+    "options": [
+      "放置；铺设",
+      "面包师",
+      "覆盖；封面",
+      "防御；辩护"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/b/baker.wav"
+  },
+  {
+    "word": "kit",
+    "options": [
+      "表演；执行情况",
+      "便宜的",
+      "工具包；成套工具",
+      "东方的；东部的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/k/kit.wav"
+  },
+  {
+    "word": "district",
+    "options": [
+      "酒吧；障碍",
+      "区域；行政区",
+      "代表；表示",
+      "市长"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/district.wav"
+  },
+  {
+    "word": "selected",
+    "options": [
+      "负荷；装载",
+      "已挑选的",
+      "已介绍的；引进的",
+      "复杂的；难解的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/selected.wav"
+  }
+]
