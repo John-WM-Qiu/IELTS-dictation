@@ -1,0 +1,32 @@
+[
+  {
+    "word": "abundant",
+    "options": ["丰富的", "稀有的", "危险的", "永久的"],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/ability.wav"
+  },
+  {
+    "word": "diligent",
+    "options": ["懒惰的", "聪明的", "勤奋的", "犹豫的"],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/access.wav"
+  },
+  {
+    "word": "ephemeral",
+    "options": ["永恒的", "短暂的", "复杂的", "明亮的"],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/abroad.wav"
+  },
+  {
+    "word": "meticulous",
+    "options": ["粗心的", "冲动的", "精确的", "模糊的"],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/accent.wav"
+  },
+  {
+    "word": "pragmatic",
+    "options": ["理想的", "实用的", "哲学的", "艺术的"],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/advantage.wav"
+  }
+]
