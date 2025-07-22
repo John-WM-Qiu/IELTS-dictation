@@ -28,5 +28,11 @@
     "options": ["理想的", "实用的", "哲学的", "艺术的"],
     "answer": 1,
     "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/advantage.wav"
+  },
+  {
+    "word": "authority",
+    "options": ["理想的", "实用的", "哲学的", "权威"],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/a/authority.wav"
   }
 ]
