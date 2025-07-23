@@ -1,0 +1,442 @@
+[
+  {
+    "word": "devise",
+    "options": [
+      "设计",
+      "临时",
+      "导弹",
+      "意识"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/devise.wav"
+  },
+  {
+    "word": "plug",
+    "options": [
+      "原油",
+      "插头",
+      "崇拜",
+      "废话"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/plug.wav"
+  },
+  {
+    "word": "endorse",
+    "options": [
+      "认可",
+      "谴责",
+      "下面",
+      "治理"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/endorse.wav"
+  },
+  {
+    "word": "proclaim",
+    "options": [
+      "大的",
+      "宣布",
+      "流行率",
+      "激进的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/proclaim.wav"
+  },
+  {
+    "word": "embed",
+    "options": [
+      "被动的",
+      "局外人",
+      "嵌入",
+      "货物"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/embed.wav"
+  },
+  {
+    "word": "rock",
+    "options": [
+      "簇",
+      "提取",
+      "岩石",
+      "明晰"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/rock.wav"
+  },
+  {
+    "word": "coalition",
+    "options": [
+      "联盟",
+      "通知",
+      "增高",
+      "尴尬"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/coalition.wav"
+  },
+  {
+    "word": "pioneer",
+    "options": [
+      "先锋",
+      "隔离",
+      "长椅",
+      "祝福"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/pioneer.wav"
+  },
+  {
+    "word": "solidarity",
+    "options": [
+      "灾难性",
+      "团结",
+      "讲道",
+      "透露"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/solidarity.wav"
+  },
+  {
+    "word": "tackle",
+    "options": [
+      "簇",
+      "思想",
+      "处理",
+      "好奇心"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/tackle.wav"
+  },
+  {
+    "word": "specialized",
+    "options": [
+      "养老金",
+      "例外",
+      "专门",
+      "强奸"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/specialized.wav"
+  },
+  {
+    "word": "piece",
+    "options": [
+      "火器",
+      "片",
+      "重大的",
+      "可能性"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/piece.wav"
+  },
+  {
+    "word": "tuition",
+    "options": [
+      "体现",
+      "隐藏",
+      "学费",
+      "一致性"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/t/tuition.wav"
+  },
+  {
+    "word": "raid",
+    "options": [
+      "叙事",
+      "袭击",
+      "横幅",
+      "拧紧"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/raid.wav"
+  },
+  {
+    "word": "commence",
+    "options": [
+      "开始",
+      "平民",
+      "全民公决",
+      "冲床"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/commence.wav"
+  },
+  {
+    "word": "predominantly",
+    "options": [
+      "酷刑",
+      "忍受",
+      "修改",
+      "主要是"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/predominantly.wav"
+  },
+  {
+    "word": "inventory",
+    "options": [
+      "征服",
+      "战争",
+      "美德",
+      "存货"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/i/inventory.wav"
+  },
+  {
+    "word": "saint",
+    "options": [
+      "扣留",
+      "讽刺",
+      "方面",
+      "圣"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/saint.wav"
+  },
+  {
+    "word": "harsh",
+    "options": [
+      "流行率",
+      "进化",
+      "边缘",
+      "残酷的"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/h/harsh.wav"
+  },
+  {
+    "word": "revival",
+    "options": [
+      "团结",
+      "推理",
+      "复兴",
+      "逻辑"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/revival.wav"
+  },
+  {
+    "word": "flourish",
+    "options": [
+      "奉献",
+      "忠诚",
+      "繁荣",
+      "后代"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/flourish.wav"
+  },
+  {
+    "word": "revive",
+    "options": [
+      "违抗",
+      "复活",
+      "腐败",
+      "导师"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/revive.wav"
+  },
+  {
+    "word": "consensus",
+    "options": [
+      "诉讼",
+      "有利可图",
+      "共识",
+      "民兵"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/consensus.wav"
+  },
+  {
+    "word": "breed",
+    "options": [
+      "病房",
+      "品种",
+      "疏散",
+      "可疑的"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/b/breed.wav"
+  },
+  {
+    "word": "compel",
+    "options": [
+      "立法机关",
+      "棚",
+      "前任",
+      "迫使"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/compel.wav"
+  },
+  {
+    "word": "bare",
+    "options": [
+      "裸",
+      "思考",
+      "有罪",
+      "全部的"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/b/bare.wav"
+  },
+  {
+    "word": "processing",
+    "options": [
+      "支持",
+      "透明度",
+      "让步",
+      "加工"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/p/processing.wav"
+  },
+  {
+    "word": "violate",
+    "options": [
+      "违反",
+      "市政",
+      "抢占",
+      "监管"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/v/violate.wav"
+  },
+  {
+    "word": "magical",
+    "options": [
+      "神奇",
+      "出没",
+      "水晶",
+      "公民"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/m/magical.wav"
+  },
+  {
+    "word": "swing",
+    "options": [
+      "慢性的",
+      "检测",
+      "征服",
+      "摇摆"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/swing.wav"
+  },
+  {
+    "word": "devil",
+    "options": [
+      "制定",
+      "魔鬼",
+      "干涉",
+      "蹂躏"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/d/devil.wav"
+  },
+  {
+    "word": "embark",
+    "options": [
+      "灵感",
+      "指定",
+      "踏上",
+      "移动的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/embark.wav"
+  },
+  {
+    "word": "lethal",
+    "options": [
+      "奇迹",
+      "爬行",
+      "致命",
+      "融合的"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/l/lethal.wav"
+  },
+  {
+    "word": "flesh",
+    "options": [
+      "唱诗班",
+      "违宪",
+      "游击队",
+      "肉"
+    ],
+    "answer": 3,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/f/flesh.wav"
+  },
+  {
+    "word": "enforcement",
+    "options": [
+      "执法",
+      "困扰",
+      "合作",
+      "人员"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/enforcement.wav"
+  },
+  {
+    "word": "endure",
+    "options": [
+      "忍受",
+      "指示",
+      "矿业",
+      "漂移"
+    ],
+    "answer": 0,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/e/endure.wav"
+  },
+  {
+    "word": "verify",
+    "options": [
+      "补贴",
+      "核实",
+      "特许经营",
+      "刺"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/v/verify.wav"
+  },
+  {
+    "word": "contractor",
+    "options": [
+      "经验",
+      "承包商",
+      "泄露",
+      "面具"
+    ],
+    "answer": 1,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/c/contractor.wav"
+  },
+  {
+    "word": "recipient",
+    "options": [
+      "丰富",
+      "独家的",
+      "接受者",
+      "意图"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/r/recipient.wav"
+  },
+  {
+    "word": "sketch",
+    "options": [
+      "酷刑",
+      "臭名昭著",
+      "草图",
+      "破产"
+    ],
+    "answer": 2,
+    "audio": "https://john-wm-qiu.github.io/IELTS_Listening/words/pronunciation/s/sketch.wav"
+  }
+]
