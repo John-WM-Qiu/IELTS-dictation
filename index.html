@@ -131,9 +131,31 @@
     <header>
       <h1>来都来了，背一下单词吧</h1>
     </header>
+    <!-- 修改search-container部分 -->
     <div class="search-container">
-      <input type="text" class="search-bar" placeholder="你今日背咗单词未啊？">
+      <input type="text" class="search-bar" id="wordInput" placeholder="你今日背咗单词未啊？">
+      <button id="searchButton" style="padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">你点我？</button>
     </div>
+    
+    <!-- 在body结束前添加JavaScript代码 -->
+    <script>
+      document.getElementById('searchButton').addEventListener('click', function() {
+        const word = document.getElementById('wordInput').value.trim();
+        if (word) {
+          const url = `https://dict.youdao.com/result?word=${encodeURIComponent(word)}&lang=en`;
+          window.open(url, '_blank');
+        } else {
+          alert('请输入要查询的单词');
+        }
+      });
+      
+      // 也支持按下回车键进行查询
+      document.getElementById('wordInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          document.getElementById('searchButton').click();
+        }
+      });
+    </script>
     <!-- 模块：L0场景预备词汇听写 -->
     <div class="module">
       <div class="section-title">
@@ -687,6 +709,3 @@
   </script>
 </body>
 </html>
-
-
-
